@@ -1,0 +1,75 @@
+/* ---- @ Media Queries ---------- */
+@media (max-width: 850px){ /* -----Media querie usada para aplicar um estilo em determinada resolução------ */
+    .header .container{
+        border-radius: 0px !important;
+        transition: 1s;
+    }
+}
+
+/*---Estilizando o elemento pai da navegação---*/
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 110px;
+    font-size: 16px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 0px 0px 80px 80px;
+    transition: 1s;
+}
+
+/*---Estilizando os itens da navegação---*/
+.logo{
+    padding-top: 10px;
+}
+.navbar1 {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.navbar2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #000000;
+    list-style: none;
+}
+.navbar1 li{
+    text-align: center;
+
+}
+.navbar2 li{
+    text-align: center;
+}
+
+/*---Estilizando as Ancoras dos Itens da navegação---*/
+.navegacao1 a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 50px;
+}
+.navegacao2 a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.pagina_atual{
+    color: rgb(88, 37, 170) !important;
+    font-weight: bolder;
+}
+
+/*---Colocando efeito ao passar o cursor nos itens da navegação---*/
+.header .container a:hover{
+    color: rgb(53, 30, 88);
+    font-weight: bolder;
+}
+.pipe{
+    cursor: default;
+    transition: 1s;
+}
+.pipe:hover{
+    transform: rotate(360deg);
+}
