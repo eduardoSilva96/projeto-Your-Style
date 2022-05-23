@@ -1,13 +1,16 @@
+/* ----------------------------- NAVBAR (HEADER) ------------------------------------------------------------------------ */
 /* ---- @ Media Queries ---------- */
-@media (max-width: 850px){ /* -----Media querie usada para aplicar um estilo em determinada resolução------ */
-    .header .container{
+@media (max-width: 850px) {
+
+    /* -----Media querie usada para aplicar um estilo em determinada resolução------ */
+    .header .container {
         border-radius: 0px !important;
         transition: 1s;
     }
 }
 
 /*---Estilizando o elemento pai da navegação---*/
-.header .container{
+.header .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,15 +23,18 @@
 }
 
 /*---Estilizando os itens da navegação---*/
-.logo{
+.logo {
     padding-top: 10px;
+    margin-left: 10px;
 }
+
 .navbar1 {
     display: flex;
     align-items: center;
     list-style: none;
     flex-wrap: wrap;
 }
+
 .navbar2 {
     display: flex;
     flex-wrap: wrap;
@@ -36,40 +42,90 @@
     color: #000000;
     list-style: none;
 }
-.navbar1 li{
-    text-align: center;
 
+.navbar1 li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.navbar2 li{
+
+.navbar2 li {
     text-align: center;
 }
 
 /*---Estilizando as Ancoras dos Itens da navegação---*/
-.navegacao1 a{
+.navegacao1 a {
     text-decoration: none;
     color: #000;
-    margin-left: 50px;
+    margin-left: 60px;
 }
-.navegacao2 a{
+
+.navegacao2 a {
     text-decoration: none;
     color: #000;
     margin-right: 10px;
     margin-left: 10px;
 }
-.pagina_atual{
-    color: rgb(88, 37, 170) !important;
+
+.pagina_atual {
+    color: rgb(53, 30, 88) !important;
     font-weight: bolder;
 }
 
 /*---Colocando efeito ao passar o cursor nos itens da navegação---*/
-.header .container a:hover{
+.header .container a:hover {
     color: rgb(53, 30, 88);
     font-weight: bolder;
 }
-.pipe{
+
+.pipe {
     cursor: default;
     transition: 1s;
 }
-.pipe:hover{
+.pipe:hover {
     transform: rotate(360deg);
+}
+
+/* ----------------------------- RODAPÉ (FOOTER)------------------------------------------------------------------------ */
+
+.footer{
+    background-color: #fff;
+}
+.footer .container{
+    border-radius: 50px 50px 0px 0px;
+    background-image: linear-gradient(rgb(31 31 31), rgb(0, 0, 0));
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 14px;
+    transition: 0.50s;
+}
+.footer .container a:hover{
+    color: rgb(255, 232, 131);
+}
+.itens_redesSociais{
+    margin-bottom: 19px;
+}
+.effect_scale{
+    margin: 0px 9px 0px 9px;
+    transition: 0.30s;
+}
+.effect_scale:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.links_rodape{
+    color: #fff;
+}
+.text_direitos{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
 }

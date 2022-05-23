@@ -1,20 +1,36 @@
 
+/* ------------Fontes Importadas do google fontes------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Rubik+Microbe&display=swap');
+
 /* ----------------  Informativos (Boas Vindas) (Utilidades) ----------------- */
 .container-corpo{
     border-radius: 100px 100px 0px 0px;
-    background-color: aliceblue;
-    height: 800px;
+    /* background-image: linear-gradient(#fff, rgb(87, 87, 87),rgb(42, 42, 42), #000); */
+    background-color: #fff;
+    height: 700px;
 }
-
-.text_boasVindas{
+.seta_turistica{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.campo_text_boasVindas{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 60px;
     text-align: center;
 }
-
+.boas_vindas{
+    background-color: #454474;
+    width: 50%;
+    padding: 20px 0px 20px 0px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Rubik Microbe', cursive;
+    font-size: 30px;
+}
 .container_utilidades{
     margin-top: 50px;
     width: 100%;
