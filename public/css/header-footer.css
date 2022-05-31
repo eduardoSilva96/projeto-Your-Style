@@ -103,10 +103,10 @@ body::-webkit-scrollbar {
 /* ----------------------------- RODAPÉ (FOOTER)------------------------------------------------------------------------ */
 
 .footer{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
 }
 .footer .container{
-    border-radius: 50px 50px 0px 0px;
+    /* border-radius: 50px 50px 0px 0px; */
     background-image: linear-gradient(rgb(31 31 31), rgb(0, 0, 0));
     padding: 30px 0px 30px 0px;
     display: flex;
