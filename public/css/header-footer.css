@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
     height: 110px;
     font-size: 16px;
     width: 100%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 0px 0px 80px 80px;
     transition: 1s;
 }

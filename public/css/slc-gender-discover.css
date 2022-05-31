@@ -1,0 +1,33 @@
+.container_gender{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color:blanchedalmond;
+}
+.title{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18vh
+}
+.gender_left{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+}
+.gender_right{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+}
+.text_gender{
+    display: flex;
+    align-items: center;
+}
+

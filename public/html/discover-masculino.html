@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/discover-masculino.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <title>Your Style - Discover</title>
+</head>
+
+<body class="background">
+
+    <!---------------------------- HEADER/NAVEGAÇÃO ----------------------------------------------------------->
+    <div class="header">
+        <div class="container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="../assets/img/logo.svg" alt="" width="80px">
+            </div>
+
+            <!-- 1° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Home, look book, Guia)-->
+            <div class="navegacao1">
+                <ul class="navbar1">
+                    <li>
+                        <a href="../index.html"><img src="../assets/icones/home.preto.png" width="12px"> Home</a>
+                    </li>
+                    <li>
+                        <a class="pagina_atual" href="discover.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Descubra</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 2° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Login e Cadastro)-->
+            <div class="navegacao2">
+                <ul class="navbar2">
+                    <li>
+                        <a href="">Login</a>
+                    </li>
+                    <span class="pipe">|</span>
+                    <li>
+                        <a href="">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
+    <div class="banner_explicativo">
+        <div class="text_discover">
+            <div>
+                <p>Descubra seu Estilo Respondendo um breve formulário :)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container_form">
+        <!------------------Formulario ETAPA 1-------------------------->
+        <div class="box_form" id="formulario_etapa1">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p>ETAPA 1 ?</p>
+            </div>
+            <div class="box_img">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Grupo De Radios Em Column --->
+            <div class="group_radio">
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r1" value="Roupass Legais"/>
+                    <p>Radio Button 1</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r2"/>
+                    <p>Radio Button 2</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r3"/>
+                    <p>Radio Button 3</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r4"/>
+                    <p>Radio Button 4</p>
+                </label>
+                <div class="area_button">
+                    <button onclick="verificar_etapa()">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------Formulario ETAPA 2-------------------------->
+        <div class="box_form"  id="formulario_etapa2" style="display: none">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p>ETAPA 2 ?</p>
+            </div>
+            <div class="box_img">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Grupo De Radios Em Column --->
+            <div class="group_radio">
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
+                    <p>Radio Button 1</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r2"/>
+                    <p>Radio Button 2</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r3"/>
+                    <p>Radio Button 3</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r4"/>
+                    <p>Radio Button 4</p>
+                </label>
+                <div class="area_button">
+                    <button onclick="verificar_etapa()">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------Formulario ETAPA 3-------------------------->
+        <div class="box_form"  id="formulario_etapa3" style="display: none">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p>ETAPA 3 ?</p>
+            </div>
+            <div class="box_img">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Grupo De Radios Em Column --->
+            <div class="group_radio">
+                <label class="label_radio">
+                    <input type="radio" id="etapa3_r1" value="Radio roupa"/>
+                    <p>Radio Button 1</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa3_r2"/>
+                    <p>Radio Button 2</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa3_r3"/>
+                    <p>Radio Button 3</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa3_r4"/>
+                    <p>Radio Button 4</p>
+                </label>
+                <div class="area_button">
+                    <button onclick="verificar_etapa()">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------Formulario ETAPA 4-------------------------->
+        <div class="box_form"  id="formulario_etapa2" style="display: none">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p>ETAPA 2 ?</p>
+            </div>
+            <div class="box_img">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Grupo De Radios Em Column --->
+            <div class="group_radio">
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
+                    <p>Radio Button 1</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r2"/>
+                    <p>Radio Button 2</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r3"/>
+                    <p>Radio Button 3</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r4"/>
+                    <p>Radio Button 4</p>
+                </label>
+                <div class="area_button">
+                    <button onclick="verificar_etapa()">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------Formulario ETAPA 5-------------------------->
+        <div class="box_form"  id="formulario_etapa2" style="display: none">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p>ETAPA 2 ?</p>
+            </div>
+            <div class="box_img">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Grupo De Radios Em Column --->
+            <div class="group_radio">
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
+                    <p>Radio Button 1</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r2"/>
+                    <p>Radio Button 2</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r3"/>
+                    <p>Radio Button 3</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" id="etapa2_r4"/>
+                    <p>Radio Button 4</p>
+                </label>
+                <div class="area_button">
+                    <button onclick="verificar_etapa()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------RODAPÉ DO SITE------------------------------------------>
+    <div class="footer">
+        <div class="container">
+            <div class="itens_redesSociais">
+
+                <img class="effect_scale" src="../assets/icones/facebook.png" alt="" width="30px">
+                <img class="effect_scale"  src="../assets/icones/twitter.png" alt="" width="30px">
+                <img class="effect_scale" src="../assets/icones/instagram.png" alt="" width="30px">
+            </div>
+            <div class="links_rodape">
+                <a href="">Sobre Nós</a> - <a href="">Referências</a> - <a href="">Tendências</a>
+            </div>
+            <div class="links_rodape">
+                <a href="">Politica de Privacidade</a> - <a href="">Termos de Uso</a>
+            </div>
+            <div class="text_direitos">
+                @ 2022 Your Style
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<!---------------------------------SCRIPT------------------------------------------>
+<script>
+    var respostas = [];
+
+    // var etapa_1 = false
+    // var etapa_2 = false
+    // var etapa_3 = false
+    // var etapa_4 = false
+    // var etapa_5 = false
+
+    // if (document.getElementById('formulario_etapa1').display = 'flex'){
+    //     etapa_1 = true
+    // } else if (document.getElementById('formulario_etapa2').display = 'flex'){
+    //     etapa_2 = true
+    // } else if (document.getElementById('formulario_etapa3').display = 'flex'){
+    //     etapa_3 = true
+    // } else if (document.getElementById('formulario_etapa4').display = 'flex'){
+    //     etapa_4 = true
+    // } else if (document.getElementById('formulario_etapa5').display = 'flex'){
+    //     etapa_5 = true
+    // }
+
+    // function verificar_etapa(){
+    //     if (etapa_1 == true){
+    //         if (document.getElementById('etapa1_r1').checked){
+    //             respostas.push(etapa1_r1.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa1').style.display = 'none'
+    //             document.getElementById('formulario_etapa2').style.display = 'flex'
+    //             etapa_2 = true
+
+    //         } else if (document.getElementById('etapa1_r2').checked){
+    //             respostas.push(etapa1_r2.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa1').style.display = 'none'
+    //             document.getElementById('formulario_etapa2').style.display = 'flex'
+                
+    //         } else if (document.getElementById('etapa1_r3').checked){
+    //             respostas.push(etapa1_r3.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa1').style.display = 'none'
+    //             document.getElementById('formulario_etapa2').style.display = 'flex'
+
+    //         } else if (document.getElementById('etapa1_r4').checked){
+    //             respostas.push(etapa1_r4.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa1').style.display = 'none'
+    //             document.getElementById('formulario_etapa2').style.display = 'flex'
+
+    //         } else {
+    //             alert ('Selecione Uma Opção Antes de prosseguir !')
+    //         }
+
+    //     } else if (etapa_2 == true){           
+    //         if (document.getElementById('etapa2_r1').checked){
+    //             respostas.push(etapa2_r1.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa2').style.display = 'none'
+    //             document.getElementById('formulario_etapa3').style.display = 'flex'
+    //             etapa_3 = true
+
+    //         } else if (document.getElementById('etapa2_r2').checked){
+    //             respostas.push(etapa2_r2.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa2').style.display = 'none'
+    //             document.getElementById('formulario_etapa3').style.display = 'flex'
+                
+    //         } else if (document.getElementById('etapa2_r3').checked){
+    //             respostas.push(etapa2_r3.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa2').style.display = 'none'
+    //             document.getElementById('formulario_etapa3').style.display = 'flex'
+
+    //         } else if (document.getElementById('etapa2_r4').checked){
+    //             respostas.push(etapa2_r4.value);
+    //             console.log(respostas)
+    //             document.getElementById('formulario_etapa2').style.display = 'none'
+    //             document.getElementById('formulario_etapa3').style.display = 'flex'
+
+    //         } else {
+    //             alert ('Selecione Uma Opção Antes de prosseguir !')
+    //         }
+    //     }
+
+        
+    // }
+    function verificar_etapa(){
+        if (document.getElementById('etapa1_r1').checked){
+            respostas.push(etapa1_r1.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
+
+        } else if (document.getElementById('etapa1_r2').checked){
+            respostas.push(etapa1_r2.value);
+            console.log(respostas)
+            
+        } else if (document.getElementById('etapa1_r3').checked){
+            respostas.push(etapa1_r3.value);
+            console.log(respostas)
+
+        } else if (document.getElementById('etapa1_r4').checked){
+            respostas.push(etapa1_r4.value);
+            console.log(respostas)
+
+        } else {
+            alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+    }
+</script>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/discover.css">
+    <link rel="stylesheet" href="../css/slc-gender-discover.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <title>Your Style - Discover</title>
 </head>
@@ -44,7 +44,8 @@
                     <li>
                         <a href="">Login</a>
                     </li>
-                    <span class="pipe">|</span>
+                    <span
+                     class="pipe">|</span>
                     <li>
                         <a href="">Cadastro</a>
                     </li>
@@ -54,5 +55,50 @@
     </div>
 
     <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
+
+    <div class="container_gender">
+        <div class="title">
+            <h1>Lorem ipsum</h1> 
+        </div>
+
+        <div class="gender_left" onclick="redirecionar_masculino()">
+            <div class="text_gender">
+                <h1>Masculino</h1>
+            </div>
+        </div>
+        <div class="gender_right" onclick="redirecionar_feminino()">
+            <div class="text_gender">
+                <h1>Feminino</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------RODAPÉ DO SITE------------------------------------------>
+    <div class="footer">
+        <div class="container">
+            <div class="itens_redesSociais">
+                <img class="effect_scale" src="../assets/icones/facebook.png" alt="" width="30px">
+                <img class="effect_scale"  src="../assets/icones/twitter.png" alt="" width="30px">
+                <img class="effect_scale" src="../assets/icones/instagram.png" alt="" width="30px">
+            </div>
+            <div class="links_rodape">
+                <a href="">Sobre Nós</a> - <a href="">Referências</a> - <a href="">Tendências</a>
+            </div>
+            <div class="links_rodape">
+                <a href="">Politica de Privacidade</a> - <a href="">Termos de Uso</a>
+            </div>
+            <div class="text_direitos">
+                @ 2022 Your Style
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
+<script>
+    function redirecionar_masculino(){
+        window.location = './discover-masculino.html';
+    }
+    function redirecionar_feminino(){
+        window.location = './discover-feminino.html';
+    }
+</script>
