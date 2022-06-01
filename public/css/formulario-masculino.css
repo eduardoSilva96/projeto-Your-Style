@@ -34,34 +34,43 @@
     line-height: 30px;
     font-weight: 800;
 }
-.box_img{
-    background-image: url('../assets/img/img_test_form.png');
-    background-size: cover;
-    width: 40vw;
-    height: 43vh;
-    border-radius: 20px;
-}
+
+.box_img_etapa1{background-image: url('../assets/img/img-etapa1.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_etapa2{background-image: url('../assets/img/img-etapa2.jpeg'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_etapa3{background-image: url('../assets/img/img-etapa3.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_etapa4{background-image: url('../assets/img/img-etapa4.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_etapa5{background-image: url('../assets/img/img-etapa5.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+
 .label_radio{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* background-image: linear-gradient(45deg, rgb(41, 41, 41),rgb(194, 194, 194)); */
-    background-color: black;
+    /* background-image: linear-gradient(45deg, rgb(197, 197, 197),rgb(165, 165, 165)); */
+    background-color: rgb(177, 177, 177);
     margin-top: 19px;
     width: 40vw;
-    height: 7vh;
+    height: 10vh;
     border-radius: 10px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.50s;
+}
+
+input[type="radio"]:checked{
+    width: 20px;
+    height: 20px;
 }
 .label_radio:hover{
     cursor: pointer;
     /* background-image: linear-gradient(45deg, rgb(44, 23, 71),rgb(138, 116, 151)); */
-    background-color: blueviolet;
+    background-color: rgb(44, 23, 71);
+    color: #fff;
 }
 
 .label_radio p {
     font-size: 16px;
     font-family: monospace  ;
+    margin-left: 10px;
 }
 .area_button{
     display: flex;

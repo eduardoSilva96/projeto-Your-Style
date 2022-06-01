@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/discover-masculino.css">
+    <link rel="stylesheet" href="../css/formulario-masculino.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <title>Your Style - Discover</title>
 </head>
@@ -68,31 +68,39 @@
         <div class="box_form" id="formulario_etapa1">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p>ETAPA 1 ?</p>
+                <p>Em relação à cores de roupas, suas preferências são:</p>
             </div>
-            <div class="box_img">
+            <div class="box_img_etapa1">
                 <!---Imagem Ilustrativa do Formulario--->
             </div> 
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
-                <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa1_r1" value="Roupass Legais"/>
-                    <p>Radio Button 1</p>
+                <label class="label_radio" id="label1">
+                    <input type="radio" name="radio" id="etapa1_r1" value="Cores neutras (preto, branco, azul marinho"/>
+                    <p>Cores neutras (preto, branco, azul marinho</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa1_r2"/>
-                    <p>Radio Button 2</p>
+                    <input type="radio" name="radio" id="etapa1_r2" value="Tons monocromáticos e discretos"/>
+                    <p>Tons monocromáticos e discretos</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa1_r3"/>
-                    <p>Radio Button 3</p>
+                    <input type="radio" name="radio" id="etapa1_r3" value="Cores fortes, luminosas, com intensidade e que sejam contrastantes"/>
+                    <p>Cores fortes, luminosas, com intensidade e que sejam contrastantes</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa1_r4"/>
-                    <p>Radio Button 4</p>
+                    <input type="radio" name="radio" id="etapa1_r4" value="Cor de rosa e tons pastéis"/>
+                    <p>Cor de rosa e tons pastéis</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r5" value="Tons terrosos (bege, marrom, nude)"/>
+                    <p>Tons terrosos (bege, marrom, nude)</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r6" value="Cores Acromáticas (Preto, Branco, Cinza)"/>
+                    <p>Cores Acromáticas (Preto, Branco, Cinza)</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa()">Continuar</button>
+                    <button onclick="verificar_etapa1()">Continuar</button>
                 </div>
             </div>
         </div>
@@ -101,32 +109,52 @@
         <div class="box_form"  id="formulario_etapa2" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p>ETAPA 2 ?</p>
+                <p>As peças de roupa com as quais eu mais me identifico são:</p>
             </div>
-            <div class="box_img">
+            <div class="box_img_etapa2">
                 <!---Imagem Ilustrativa do Formulario--->
             </div> 
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
-                    <p>Radio Button 1</p>
+                    <input type="radio" name="radio" id="etapa2_r1" value="Jeans e camiseta básica"/>
+                    <p>Jeans e camiseta básica</p>
                 </label>
+
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r2"/>
-                    <p>Radio Button 2</p>
+                    <input type="radio" name="radio" id="etapa2_r2" value="Roupas discretas e sem muito detalhes"/>
+                    <p>Roupas discretas e sem muito detalhes</p>
                 </label>
+                
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r3"/>
-                    <p>Radio Button 3</p>
+                    <input type="radio" name="radio" id="etapa2_r3" value="Peças com estampa étnicas/tribais"/>
+                    <p>Peças com estampa étnicas/tribais</p>
                 </label>
+
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r4"/>
-                    <p>Radio Button 4</p>
+                    <input type="radio" name="radio" id="etapa2_r4" value="Roupas com brilhos, tranparências e fendas"/>
+                    <p>Roupas com brilhos, tranparências e fendas</p>
                 </label>
+
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa2_r5" value="Roupas com brilhos, tranparências e fendas"/>
+                    <p>Roupas com brilhos, tranparências e fendas</p>
+                </label>
+
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa2_r6" value="Peças em couro"/>
+                    <p>Peças em couro</p>
+                </label>
+
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa2_r7" value="Roupas Sociais, Ternos e camisa"/>
+                    <p>Roupas Sociais, Ternos e camisa</p>
+                </label>
+
                 <div class="area_button">
-                    <button onclick="verificar_etapa()">Continuar</button>
+                    <button onclick="verificar_etapa2()">Continuar</button>
                 </div>
+
             </div>
         </div>
 
@@ -134,97 +162,105 @@
         <div class="box_form"  id="formulario_etapa3" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p>ETAPA 3 ?</p>
+                <p>Em relação a acessórios quais tipos de peças você prefere?</p>
             </div>
-            <div class="box_img">
+            <div class="box_img_etapa3">
                 <!---Imagem Ilustrativa do Formulario--->
             </div> 
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio">
-                    <input type="radio" id="etapa3_r1" value="Radio roupa"/>
-                    <p>Radio Button 1</p>
+                    <input type="radio" name="radio" id="etapa3_r1" value="Prefiro jóias verdadeiras e semijoias, prezo por acessórios duráveis e de boa qualidade"/>
+                    <p>Prefiro jóias verdadeiras e semijoias, prezo por acessórios duráveis e de boa qualidade</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa3_r2"/>
-                    <p>Radio Button 2</p>
+                    <input type="radio" name="radio" id="etapa3_r2" value="Gosto de peças práticas e simples, acessórios naturais, artesanais ou couro"/>
+                    <p>Gosto de peças práticas e simples, acessórios naturais, artesanais ou couro</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa3_r3"/>
-                    <p>Radio Button 3</p>
+                    <input type="radio" name="radio" id="etapa3_r3" value="Prefiro acessórios pequenos e discretos"/>
+                    <p>Prefiro acessórios pequenos e discretos</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa3_r4"/>
-                    <p>Radio Button 4</p>
+                    <input type="radio" name="radio" id="etapa3_r4" value="Gosto de acessório que chama atenção, cores fortes, grandes ou diferentes"/>
+                    <p>Gosto de acessório que chama atenção, cores fortes, grandes ou diferentes</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa3_r5" value="Não gosto de acessórios"/>
+                    <p>Não gosto de acessórios</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa()">Continuar</button>
+                    <button onclick="verificar_etapa3()">Continuar</button>
                 </div>
             </div>
         </div>
 
         <!------------------Formulario ETAPA 4-------------------------->
-        <div class="box_form"  id="formulario_etapa2" style="display: none">
+        <div class="box_form"  id="formulario_etapa4" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p>ETAPA 2 ?</p>
+                <p>Caimento das suas Roupas:</p>
             </div>
-            <div class="box_img">
+            <div class="box_img_etapa4">
                 <!---Imagem Ilustrativa do Formulario--->
             </div> 
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
-                    <p>Radio Button 1</p>
+                    <input type="radio" name="radio" id="etapa4_r1" value="Prefiro roupas justas"/>
+                    <p>Prefiro roupas justas</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r2"/>
-                    <p>Radio Button 2</p>
+                    <input type="radio" name="radio" id="etapa4_r2" value="Roupas mais Folgadas"/>
+                    <p>Roupas mais Folgadas</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r3"/>
-                    <p>Radio Button 3</p>
+                    <input type="radio" name="radio" id="etapa4_r3" value="Eu vario um pouco"/>
+                    <p>Eu vario um pouco</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r4"/>
-                    <p>Radio Button 4</p>
+                    <input type="radio" name="radio" id="etapa4_r4" value="Gosto de roupas apertadas"/>
+                    <p>Gosto de roupas apertadas</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa()">Continuar</button>
+                    <button onclick="verificar_etapa4()">Continuar</button>
                 </div>
             </div>
         </div>
 
         <!------------------Formulario ETAPA 5-------------------------->
-        <div class="box_form"  id="formulario_etapa2" style="display: none">
+        <div class="box_form"  id="formulario_etapa5" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p>ETAPA 2 ?</p>
+                <p>No seu dia-a-dia qual tipo de calçado você mais usa ?:</p>
             </div>
-            <div class="box_img">
+            <div class="box_img_etapa5">
                 <!---Imagem Ilustrativa do Formulario--->
             </div> 
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r1" value="Radio roupa"/>
-                    <p>Radio Button 1</p>
+                    <input type="radio" name="radio" id="etapa5_r1" value="Sapatos Sociais"/>
+                    <p>Sapatos Sociais</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r2"/>
-                    <p>Radio Button 2</p>
+                    <input type="radio" name="radio" id="etapa5_r2" value="Sapatenis"/>
+                    <p>Sapatenis</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r3"/>
-                    <p>Radio Button 3</p>
+                    <input type="radio" name="radio" id="etapa5_r3" value="Tênis Esportivos"/>
+                    <p>Tênis Esportivos</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" id="etapa2_r4"/>
-                    <p>Radio Button 4</p>
+                    <input type="radio" name="radio" id="etapa5_r4" value="Tênis Casual"/>
+                    <p>Tênis Casual</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa5_r5" value="Botas"/>
+                    <p>Botas</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa()">Continuar</button>
+                    <button onclick="verificar_etapa5()">Continuar</button>
                 </div>
             </div>
         </div>
@@ -256,89 +292,7 @@
 <script>
     var respostas = [];
 
-    // var etapa_1 = false
-    // var etapa_2 = false
-    // var etapa_3 = false
-    // var etapa_4 = false
-    // var etapa_5 = false
-
-    // if (document.getElementById('formulario_etapa1').display = 'flex'){
-    //     etapa_1 = true
-    // } else if (document.getElementById('formulario_etapa2').display = 'flex'){
-    //     etapa_2 = true
-    // } else if (document.getElementById('formulario_etapa3').display = 'flex'){
-    //     etapa_3 = true
-    // } else if (document.getElementById('formulario_etapa4').display = 'flex'){
-    //     etapa_4 = true
-    // } else if (document.getElementById('formulario_etapa5').display = 'flex'){
-    //     etapa_5 = true
-    // }
-
-    // function verificar_etapa(){
-    //     if (etapa_1 == true){
-    //         if (document.getElementById('etapa1_r1').checked){
-    //             respostas.push(etapa1_r1.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa1').style.display = 'none'
-    //             document.getElementById('formulario_etapa2').style.display = 'flex'
-    //             etapa_2 = true
-
-    //         } else if (document.getElementById('etapa1_r2').checked){
-    //             respostas.push(etapa1_r2.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa1').style.display = 'none'
-    //             document.getElementById('formulario_etapa2').style.display = 'flex'
-                
-    //         } else if (document.getElementById('etapa1_r3').checked){
-    //             respostas.push(etapa1_r3.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa1').style.display = 'none'
-    //             document.getElementById('formulario_etapa2').style.display = 'flex'
-
-    //         } else if (document.getElementById('etapa1_r4').checked){
-    //             respostas.push(etapa1_r4.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa1').style.display = 'none'
-    //             document.getElementById('formulario_etapa2').style.display = 'flex'
-
-    //         } else {
-    //             alert ('Selecione Uma Opção Antes de prosseguir !')
-    //         }
-
-    //     } else if (etapa_2 == true){           
-    //         if (document.getElementById('etapa2_r1').checked){
-    //             respostas.push(etapa2_r1.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa2').style.display = 'none'
-    //             document.getElementById('formulario_etapa3').style.display = 'flex'
-    //             etapa_3 = true
-
-    //         } else if (document.getElementById('etapa2_r2').checked){
-    //             respostas.push(etapa2_r2.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa2').style.display = 'none'
-    //             document.getElementById('formulario_etapa3').style.display = 'flex'
-                
-    //         } else if (document.getElementById('etapa2_r3').checked){
-    //             respostas.push(etapa2_r3.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa2').style.display = 'none'
-    //             document.getElementById('formulario_etapa3').style.display = 'flex'
-
-    //         } else if (document.getElementById('etapa2_r4').checked){
-    //             respostas.push(etapa2_r4.value);
-    //             console.log(respostas)
-    //             document.getElementById('formulario_etapa2').style.display = 'none'
-    //             document.getElementById('formulario_etapa3').style.display = 'flex'
-
-    //         } else {
-    //             alert ('Selecione Uma Opção Antes de prosseguir !')
-    //         }
-    //     }
-
-        
-    // }
-    function verificar_etapa(){
+    function verificar_etapa1(){
         if (document.getElementById('etapa1_r1').checked){
             respostas.push(etapa1_r1.value);
             console.log(respostas)
@@ -348,14 +302,152 @@
         } else if (document.getElementById('etapa1_r2').checked){
             respostas.push(etapa1_r2.value);
             console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
             
         } else if (document.getElementById('etapa1_r3').checked){
             respostas.push(etapa1_r3.value);
             console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
 
         } else if (document.getElementById('etapa1_r4').checked){
             respostas.push(etapa1_r4.value);
             console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
+        
+        } else if (document.getElementById('etapa1_r5').checked){
+            respostas.push(etapa1_r5.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
+
+        } else if (document.getElementById('etapa1_r6').checked){
+            respostas.push(etapa1_r6.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa1').style.display = 'none'
+            document.getElementById('formulario_etapa2').style.display = 'flex'
+
+        } else {
+            alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+    }
+
+    function verificar_etapa2(){
+        if (document.getElementById('etapa2_r1').checked){
+            respostas.push(etapa2_r1.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+
+        } else if (document.getElementById('etapa2_r2').checked){
+            respostas.push(etapa2_r2.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+            
+        } else if (document.getElementById('etapa2_r3').checked){
+            respostas.push(etapa2_r3.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+
+        } else if (document.getElementById('etapa2_r4').checked){
+            respostas.push(etapa2_r4.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+
+        } else {
+            alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+    }
+
+    function verificar_etapa3(){
+        if (document.getElementById('etapa3_r1').checked){
+            respostas.push(etapa3_r1.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa3').style.display = 'none'
+            document.getElementById('formulario_etapa4').style.display = 'flex'
+
+        } else if (document.getElementById('etapa3_r2').checked){
+            respostas.push(etapa3_r2.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa3').style.display = 'none'
+            document.getElementById('formulario_etapa4').style.display = 'flex'
+            
+        } else if (document.getElementById('etapa3_r3').checked){
+            respostas.push(etapa3_r3.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa3').style.display = 'none'
+            document.getElementById('formulario_etapa4').style.display = 'flex'
+
+        } else if (document.getElementById('etapa3_r4').checked){
+            respostas.push(etapa3_r4.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa3').style.display = 'none'
+            document.getElementById('formulario_etapa4').style.display = 'flex'
+
+        } else {
+            alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+    }
+
+    function verificar_etapa4(){
+        if (document.getElementById('etapa4_r1').checked){
+            respostas.push(etapa4_r1.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa4').style.display = 'none'
+            document.getElementById('formulario_etapa5').style.display = 'flex'
+
+        } else if (document.getElementById('etapa4_r2').checked){
+            respostas.push(etapa4_r2.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa4').style.display = 'none'
+            document.getElementById('formulario_etapa5').style.display = 'flex'
+            
+        } else if (document.getElementById('etapa4_r3').checked){
+            respostas.push(etapa4_r3.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa4').style.display = 'none'
+            document.getElementById('formulario_etapa5').style.display = 'flex'
+
+        } else if (document.getElementById('etapa4_r4').checked){
+            respostas.push(etapa4_r4.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa4').style.display = 'none'
+            document.getElementById('formulario_etapa5').style.display = 'flex'
+
+        } else {
+            alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+    }
+
+    function verificar_etapa5(){
+        if (document.getElementById('etapa5_r1').checked){
+            respostas.push(etapa5_r1.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa5').style.display = 'none'
+            document.getElementById('formulario_etapa6').style.display = 'flex'
+
+        } else if (document.getElementById('etapa5_r2').checked){
+            respostas.push(etapa5_r2.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa5').style.display = 'none'
+            document.getElementById('formulario_etapa6').style.display = 'flex'
+            
+        } else if (document.getElementById('etapa5_r3').checked){
+            respostas.push(etapa5_r3.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa5').style.display = 'none'
+            document.getElementById('formulario_etapa6').style.display = 'flex'
+
+        } else if (document.getElementById('etapa5_r4').checked){
+            respostas.push(etapa5_r4.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa5').style.display = 'none'
+            document.getElementById('formulario_etapa6').style.display = 'flex'
 
         } else {
             alert ('Selecione Uma Opção Antes de prosseguir !')

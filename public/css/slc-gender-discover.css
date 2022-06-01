@@ -1,33 +1,53 @@
 .container_gender{
     display: flex;
-    width: 100%;
-    height: 100vh;
-    background-color:blanchedalmond;
-}
-.title{
-    display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 18vh
+    height: 520px;
 }
-.gender_left{
+.box_gender{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 50%;
-    height: 100%;
-    border: 2px solid red;
-}
-.gender_right{
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-    border: 2px solid red;
-}
-.text_gender{
-    display: flex;
     align-items: center;
+    background-color: rgb(219, 219, 219);
+    height: 28vh;
+    width: 37vw;
+    border-radius: 10px;
+    box-shadow: 0 0 3em rgb(0, 0, 0);
+
 }
 
+.button-M{
+    background-image: linear-gradient(rgb(55, 55, 145), rgb(15, 20, 65));
+    border-radius: 10px;
+    color: #fff;
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    transition: 0.40s;
+}
+
+.area_buttons{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.button-F{
+    background-image: linear-gradient(rgb(182, 101, 101), rgb(65, 15, 15));
+    border-radius: 10px;
+    color: #fff;
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    transition: 0.40s;
+}
+.button-M:hover{
+    background-image: linear-gradient(rgb(45, 45, 189), rgb(26, 36, 121));
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.button-F:hover{
+    background-image: linear-gradient(rgb(202, 71, 71), rgb(121, 26, 26));
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -57,20 +57,18 @@
     <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
 
     <div class="container_gender">
-        <div class="title">
-            <h1>Lorem ipsum</h1> 
-        </div>
+        <div class="box_gender">
 
-        <div class="gender_left" onclick="redirecionar_masculino()">
-            <div class="text_gender">
-                <h1>Masculino</h1>
+            <div class="title">
+                <h3>Nos Informe seu Gênero</h3> 
             </div>
-        </div>
-        <div class="gender_right" onclick="redirecionar_feminino()">
-            <div class="text_gender">
-                <h1>Feminino</h1>
+
+            <div class="area_buttons">
+                <button class="button-M" onclick="redirecionar_masculino()">Masculino</button>
+                <button class="button-F" onclick="redirecionar_feminino()">Feminino</button>
             </div>
-        </div>
+
+        </div>  
     </div>
     <!---------------------------------RODAPÉ DO SITE------------------------------------------>
     <div class="footer">
@@ -96,9 +94,9 @@
 </html>
 <script>
     function redirecionar_masculino(){
-        window.location = './discover-masculino.html';
+        window.location = './etapa1-M.html';
     }
     function redirecionar_feminino(){
-        window.location = './discover-feminino.html';
+        window.location = './etapa1-F.html';
     }
 </script>
