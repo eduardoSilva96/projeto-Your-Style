@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/formulario-masculino.css">
     <link rel="stylesheet" href="../css/header-footer.css">
+    <script src="../js/funcoes.js"></script>
     <title>Your Style - Discover</title>
 </head>
 
@@ -55,15 +56,32 @@
 
     <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
     <div class="banner_explicativo">
-        <div class="text_discover">
+        <div class="text_discover1">
             <div>
-                <p>Descubra seu Estilo Respondendo um breve formulário :)</p>
+                <p>Descubra seu Estilo Respondendo nosso formulario</p>
             </div>
         </div>
+
+        <div class="text_discover2">
+            <div>
+                <h4>Siga algumas instruções para o preenchimento do teste :</h4>
+            </div>
+            <div>
+                <ul>
+                    <li><p>Leia atentamente as opções e as perguntas</p></li>
+                    <li><p>Seja verdadeiro ao responder as perguntas</p></li>
+                    <li><p>Responda com base no seu dia-a-dia e as peças de seu vestiario</p></li>
+                    <li><p>lorem</p></li>
+                    <li><p>lorem</p></li>
+                   
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 
-    <div class="container_form">
+    <div class="container_form"  id="section1">
         <!------------------Formulario ETAPA 1-------------------------->
         <div class="box_form" id="formulario_etapa1">
             <!---Titulo do Formulario--->
@@ -76,8 +94,8 @@
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio" id="label1">
-                    <input type="radio" name="radio" id="etapa1_r1" value="Cores neutras (preto, branco, azul marinho"/>
-                    <p>Cores neutras (preto, branco, azul marinho</p>
+                    <input type="radio" name="radio" id="etapa1_r1" value="Cores neutras (preto, branco, azul marinho)"/>
+                    <p>Cores neutras (preto, branco, azul marinho)</p>
                 </label>
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa1_r2" value="Tons monocromáticos e discretos"/>
@@ -100,7 +118,9 @@
                     <p>Cores Acromáticas (Preto, Branco, Cinza)</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa1()">Continuar</button>
+                    <a href="#section1">
+                        <button onclick="verificar_etapa1()">Continuar</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -127,18 +147,18 @@
                 </label>
                 
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa2_r3" value="Peças com estampa étnicas/tribais"/>
-                    <p>Peças com estampa étnicas/tribais</p>
+                    <input type="radio" name="radio" id="etapa2_r3" value="Peças com estampa"/>
+                    <p>Peças com estampa</p>
                 </label>
 
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa2_r4" value="Roupas com brilhos, tranparências e fendas"/>
-                    <p>Roupas com brilhos, tranparências e fendas</p>
+                    <input type="radio" name="radio" id="etapa2_r4" value="Peças de Alfaiataria"/>
+                    <p>Peças de Alfaiataria</p>
                 </label>
 
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa2_r5" value="Roupas com brilhos, tranparências e fendas"/>
-                    <p>Roupas com brilhos, tranparências e fendas</p>
+                    <input type="radio" name="radio" id="etapa2_r5" value="Bermuda e camisa"/>
+                    <p>Bermuda e camisa</p>
                 </label>
 
                 <label class="label_radio">
@@ -152,7 +172,9 @@
                 </label>
 
                 <div class="area_button">
-                    <button onclick="verificar_etapa2()">Continuar</button>
+                    <a href="#section1">
+                        <button onclick="verificar_etapa2()">Continuar</button>
+                    </a>
                 </div>
 
             </div>
@@ -190,7 +212,9 @@
                     <p>Não gosto de acessórios</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa3()">Continuar</button>
+                    <a href="#section1">
+                        <button onclick="verificar_etapa3()">Continuar</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -215,15 +239,17 @@
                     <p>Roupas mais Folgadas</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa4_r3" value="Eu vario um pouco"/>
-                    <p>Eu vario um pouco</p>
+                    <input type="radio" name="radio" id="etapa4_r3" value="Caimento Alinhado (tecidos leves)"/>
+                    <p>Caimento Alinhado (tecidos leves)</p>
                 </label>
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa4_r4" value="Gosto de roupas apertadas"/>
                     <p>Gosto de roupas apertadas</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa4()">Continuar</button>
+                    <a href="#section1">
+                        <button onclick="verificar_etapa4()">Continuar</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -260,7 +286,34 @@
                     <p>Botas</p>
                 </label>
                 <div class="area_button">
-                    <button onclick="verificar_etapa5()">Continuar</button>
+                    <a href="#section1">
+                        <button onclick="verificar_etapa5()">Continuar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!------------------LOADING - VERIFICANDO-------------------------->
+        <div id="div_aguardar" class="loading-div">
+            <img src="../assets/circle-loading.gif" id="loading-gif">
+        </div>
+
+        <!------------------------RESULTADO------------------------------->
+        <div class="box_form"  id="resultado" style="display: none">
+            <!---Titulo do Formulario--->
+            <div class="titulo_form">
+                <p id="text_resultado">Seu Estilo é :</p>
+            </div>
+            <div id="box_img_resultado">
+                <!---Imagem Ilustrativa do Formulario--->
+            </div> 
+            <!--- Explicação sobre o estilo --->
+            <div class="area_explicacao">
+                
+                <div class="area_button">
+                    <a href="./cadastro.html">
+                        <button onclick="redirecionar_cadastro()">Se cadastrar</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -290,6 +343,7 @@
 </html>
 <!---------------------------------SCRIPT------------------------------------------>
 <script>
+    
     var respostas = [];
 
     function verificar_etapa1(){
@@ -358,6 +412,24 @@
             console.log(respostas)
             document.getElementById('formulario_etapa2').style.display = 'none'
             document.getElementById('formulario_etapa3').style.display = 'flex'
+        
+        } else if (document.getElementById('etapa2_r5').checked){
+            respostas.push(etapa2_r5.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+        
+        } else if (document.getElementById('etapa2_r6').checked){
+            respostas.push(etapa2_r6.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
+        
+        } else if (document.getElementById('etapa2_r7').checked){
+            respostas.push(etapa2_r7.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa2').style.display = 'none'
+            document.getElementById('formulario_etapa3').style.display = 'flex'
 
         } else {
             alert ('Selecione Uma Opção Antes de prosseguir !')
@@ -385,6 +457,12 @@
 
         } else if (document.getElementById('etapa3_r4').checked){
             respostas.push(etapa3_r4.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa3').style.display = 'none'
+            document.getElementById('formulario_etapa4').style.display = 'flex'
+        
+        } else if (document.getElementById('etapa3_r5').checked){
+            respostas.push(etapa3_r5.value);
             console.log(respostas)
             document.getElementById('formulario_etapa3').style.display = 'none'
             document.getElementById('formulario_etapa4').style.display = 'flex'
@@ -429,28 +507,88 @@
             respostas.push(etapa5_r1.value);
             console.log(respostas)
             document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('formulario_etapa6').style.display = 'flex'
+            document.getElementById('resultado').style.display = 'flex'
 
         } else if (document.getElementById('etapa5_r2').checked){
             respostas.push(etapa5_r2.value);
             console.log(respostas)
             document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('formulario_etapa6').style.display = 'flex'
+            document.getElementById('resultado').style.display = 'flex'
             
         } else if (document.getElementById('etapa5_r3').checked){
             respostas.push(etapa5_r3.value);
             console.log(respostas)
             document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('formulario_etapa6').style.display = 'flex'
+            document.getElementById('resultado').style.display = 'flex'
 
         } else if (document.getElementById('etapa5_r4').checked){
             respostas.push(etapa5_r4.value);
             console.log(respostas)
             document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('formulario_etapa6').style.display = 'flex'
+            document.getElementById('resultado').style.display = 'flex'
+
+        } else if (document.getElementById('etapa5_r5').checked){
+            respostas.push(etapa5_r5.value);
+            console.log(respostas)
+            document.getElementById('formulario_etapa5').style.display = 'none'
+            document.getElementById('resultado').style.display = 'flex'
 
         } else {
             alert ('Selecione Uma Opção Antes de prosseguir !')
+        }
+
+        resultado();
+    }
+
+    function resultado(){
+
+        if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
+
+        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
+
+        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
+
+        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
+
+        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
+
+        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
+            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
+            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
+            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
+            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
+            ){
+            text_resultado.innerHTML = `Seu estilo é: Tradicional`
         }
     }
 </script>

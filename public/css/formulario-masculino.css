@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 .background{
     background-image: url('../assets/img/background-discover.png');
     background-color: rgb(43, 43, 43);
@@ -7,11 +9,28 @@
 .banner_explicativo{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.text_discover{
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 80px;
+.text_discover1{
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    padding-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.text_discover2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 80%;
+    height: 60vh;
+    margin-bottom: 30px;
+    color: rgb(100, 43, 114);
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
 }
 /* --------------------------------FORMULARIO-------------------------------- */
 .container_form{
@@ -26,13 +45,14 @@
     background-color: aliceblue;
     box-shadow: 0 0 3em rgb(57, 43, 70);
     border-radius: 20px;
-    width: 50%;
+    width: 65%;
     padding-bottom: 30px;
 }
 .titulo_form{
-    font-size: 19px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 50px;
     font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .box_img_etapa1{background-image: url('../assets/img/img-etapa1.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
@@ -69,7 +89,7 @@ input[type="radio"]:checked{
 
 .label_radio p {
     font-size: 16px;
-    font-family: monospace  ;
+    font-family: 'Ubuntu', sans-serif;
     margin-left: 10px;
 }
 .area_button{
@@ -90,4 +110,14 @@ input[type="radio"]:checked{
 }
 .area_button button:hover{
     transform: scale(1.1);
+}
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+}
+.loading-div img {
+    height: 50px;
+    width: 50px;
 }
