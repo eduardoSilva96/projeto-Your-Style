@@ -25,7 +25,7 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    width: 80%;
+    width: 65%;
     height: 60vh;
     margin-bottom: 30px;
     color: rgb(100, 43, 114);
@@ -121,3 +121,7 @@ input[type="radio"]:checked{
     height: 50px;
     width: 50px;
 }
+
+.box_img_resultado_tradicional{background-image: url('../assets/img/Estilo-tradicional.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_resultado_elegante{background-image: url('../assets/img/Estilo-elegante.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}
+.box_img_resultado_esportivo{background-image: url('../assets/img/Estilo-esportivo.png'); background-size: cover; width: 40vw; height: 43vh; border-radius: 20px;}

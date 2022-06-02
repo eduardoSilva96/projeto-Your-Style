@@ -10,17 +10,17 @@
 }
 /*-------------------------SCROLLBAR--------------------------------*/
 body::-webkit-scrollbar {
-    width: 12px; /*Largura da Barra de rolagem */
+    width: 14px; /*Largura da Barra de rolagem */
   }
   
   body::-webkit-scrollbar-track {
-    background: #454474; /* Cor da Raiz Principal da Barra de Rolagem */
+    background: #ffffff; /* Cor da Raiz Principal da Barra de Rolagem */
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 255, 255); /* Cor do scroll Thub */
+    background-color: rgb(99, 51, 117); /* Cor do scroll Thub */
     border-radius: 20px; /* Curvatura do Scroll thumb */
-    border: 3px solid #454474; /*Criar uma Borda com cor no Scroll thumb*/
+    border: 3px solid #825e91; /*Criar uma Borda com cor no Scroll thumb*/
   }
 
 /*---Estilizando o elemento pai da navegação---*/

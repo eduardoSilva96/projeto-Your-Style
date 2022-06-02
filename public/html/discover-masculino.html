@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/formulario-masculino.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <script src="../js/funcoes.js"></script>
+    <script src="../js/discover-masculino.js"></script>
     <title>Your Style - Discover</title>
 </head>
 
@@ -30,7 +31,7 @@
                         <a href="../index.html"><img src="../assets/icones/home.preto.png" width="12px"> Home</a>
                     </li>
                     <li>
-                        <a class="pagina_atual" href="discover.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Descubra</a>
+                        <a class="pagina_atual" href="discover-masculino.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Descubra</a>
                     </li>
                     <li>
                         <a href=""><img src="../assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
@@ -71,9 +72,6 @@
                     <li><p>Leia atentamente as opções e as perguntas</p></li>
                     <li><p>Seja verdadeiro ao responder as perguntas</p></li>
                     <li><p>Responda com base no seu dia-a-dia e as peças de seu vestiario</p></li>
-                    <li><p>lorem</p></li>
-                    <li><p>lorem</p></li>
-                   
                 </ul>
             </div>
         </div>
@@ -293,20 +291,17 @@
             </div>
         </div>
 
-        <!------------------LOADING - VERIFICANDO-------------------------->
-        <div id="div_aguardar" class="loading-div">
-            <img src="../assets/circle-loading.gif" id="loading-gif">
-        </div>
-
         <!------------------------RESULTADO------------------------------->
         <div class="box_form"  id="resultado" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
-                <p id="text_resultado">Seu Estilo é :</p>
+                <p id="text_resultado"></p>
             </div>
-            <div id="box_img_resultado">
-                <!---Imagem Ilustrativa do Formulario--->
-            </div> 
+
+            <div id="img_tradicional" class="box_img_resultado_tradicional" style="display: none;"></div> 
+            <div id="img_elegante" class="box_img_resultado_elegante" style="display: none;"></div> 
+            <div id="img_esportivo" class="box_img_resultado_esportivo" style="display: none;"></div> 
+
             <!--- Explicação sobre o estilo --->
             <div class="area_explicacao">
                 
@@ -318,6 +313,7 @@
             </div>
         </div>
     </div>
+    
     <!---------------------------------RODAPÉ DO SITE------------------------------------------>
     <div class="footer">
         <div class="container">
@@ -341,254 +337,9 @@
     </div>
 </body>
 </html>
-<!---------------------------------SCRIPT------------------------------------------>
 <script>
+    function redirecionar_cadastro(){
+        window.location = './cadastro.html'
+    }
     
-    var respostas = [];
-
-    function verificar_etapa1(){
-        if (document.getElementById('etapa1_r1').checked){
-            respostas.push(etapa1_r1.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-
-        } else if (document.getElementById('etapa1_r2').checked){
-            respostas.push(etapa1_r2.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-            
-        } else if (document.getElementById('etapa1_r3').checked){
-            respostas.push(etapa1_r3.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-
-        } else if (document.getElementById('etapa1_r4').checked){
-            respostas.push(etapa1_r4.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-        
-        } else if (document.getElementById('etapa1_r5').checked){
-            respostas.push(etapa1_r5.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-
-        } else if (document.getElementById('etapa1_r6').checked){
-            respostas.push(etapa1_r6.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa1').style.display = 'none'
-            document.getElementById('formulario_etapa2').style.display = 'flex'
-
-        } else {
-            alert ('Selecione Uma Opção Antes de prosseguir !')
-        }
-    }
-
-    function verificar_etapa2(){
-        if (document.getElementById('etapa2_r1').checked){
-            respostas.push(etapa2_r1.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-
-        } else if (document.getElementById('etapa2_r2').checked){
-            respostas.push(etapa2_r2.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-            
-        } else if (document.getElementById('etapa2_r3').checked){
-            respostas.push(etapa2_r3.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-
-        } else if (document.getElementById('etapa2_r4').checked){
-            respostas.push(etapa2_r4.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-        
-        } else if (document.getElementById('etapa2_r5').checked){
-            respostas.push(etapa2_r5.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-        
-        } else if (document.getElementById('etapa2_r6').checked){
-            respostas.push(etapa2_r6.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-        
-        } else if (document.getElementById('etapa2_r7').checked){
-            respostas.push(etapa2_r7.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa2').style.display = 'none'
-            document.getElementById('formulario_etapa3').style.display = 'flex'
-
-        } else {
-            alert ('Selecione Uma Opção Antes de prosseguir !')
-        }
-    }
-
-    function verificar_etapa3(){
-        if (document.getElementById('etapa3_r1').checked){
-            respostas.push(etapa3_r1.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa3').style.display = 'none'
-            document.getElementById('formulario_etapa4').style.display = 'flex'
-
-        } else if (document.getElementById('etapa3_r2').checked){
-            respostas.push(etapa3_r2.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa3').style.display = 'none'
-            document.getElementById('formulario_etapa4').style.display = 'flex'
-            
-        } else if (document.getElementById('etapa3_r3').checked){
-            respostas.push(etapa3_r3.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa3').style.display = 'none'
-            document.getElementById('formulario_etapa4').style.display = 'flex'
-
-        } else if (document.getElementById('etapa3_r4').checked){
-            respostas.push(etapa3_r4.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa3').style.display = 'none'
-            document.getElementById('formulario_etapa4').style.display = 'flex'
-        
-        } else if (document.getElementById('etapa3_r5').checked){
-            respostas.push(etapa3_r5.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa3').style.display = 'none'
-            document.getElementById('formulario_etapa4').style.display = 'flex'
-
-        } else {
-            alert ('Selecione Uma Opção Antes de prosseguir !')
-        }
-    }
-
-    function verificar_etapa4(){
-        if (document.getElementById('etapa4_r1').checked){
-            respostas.push(etapa4_r1.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa4').style.display = 'none'
-            document.getElementById('formulario_etapa5').style.display = 'flex'
-
-        } else if (document.getElementById('etapa4_r2').checked){
-            respostas.push(etapa4_r2.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa4').style.display = 'none'
-            document.getElementById('formulario_etapa5').style.display = 'flex'
-            
-        } else if (document.getElementById('etapa4_r3').checked){
-            respostas.push(etapa4_r3.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa4').style.display = 'none'
-            document.getElementById('formulario_etapa5').style.display = 'flex'
-
-        } else if (document.getElementById('etapa4_r4').checked){
-            respostas.push(etapa4_r4.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa4').style.display = 'none'
-            document.getElementById('formulario_etapa5').style.display = 'flex'
-
-        } else {
-            alert ('Selecione Uma Opção Antes de prosseguir !')
-        }
-    }
-
-    function verificar_etapa5(){
-        if (document.getElementById('etapa5_r1').checked){
-            respostas.push(etapa5_r1.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('resultado').style.display = 'flex'
-
-        } else if (document.getElementById('etapa5_r2').checked){
-            respostas.push(etapa5_r2.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('resultado').style.display = 'flex'
-            
-        } else if (document.getElementById('etapa5_r3').checked){
-            respostas.push(etapa5_r3.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('resultado').style.display = 'flex'
-
-        } else if (document.getElementById('etapa5_r4').checked){
-            respostas.push(etapa5_r4.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('resultado').style.display = 'flex'
-
-        } else if (document.getElementById('etapa5_r5').checked){
-            respostas.push(etapa5_r5.value);
-            console.log(respostas)
-            document.getElementById('formulario_etapa5').style.display = 'none'
-            document.getElementById('resultado').style.display = 'flex'
-
-        } else {
-            alert ('Selecione Uma Opção Antes de prosseguir !')
-        }
-
-        resultado();
-    }
-
-    function resultado(){
-
-        if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-
-        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-
-        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-
-        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-
-        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-
-        } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' || 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-            respostas[1] == 'Jeans e camiseta básica' || 'Roupas discretas e sem muito detalhes' &&
-            respostas[2] == 'Prefiro acessórios pequenos e discretos' || 'Não gosto de acessórios' &&
-            respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-            respostas[4] == 'Tênis Casual' || 'Tênis Esportivos'
-            ){
-            text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        }
-    }
 </script>
