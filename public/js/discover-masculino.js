@@ -1,8 +1,17 @@
+// Iniciando o Formulario
+function start(){
+    document.getElementById('iniciar_teste').style.display = 'none'
+    document.getElementById('formulario_etapa1').style.display = 'flex'
+}
 
 // -------vetor para armazenar as respostas de cada etapa---------//
 var respostas = [];
 
- 
+// -------variaveis para receber as pontuações---------//
+var tradicional = 0;
+var sofisticado = 0;
+var esportivo = 0;
+var romantico = 0;
 
 // ---------------------VERIFICANDO CADA ETAPA E ARMAZENANDO A RESPOSTA EM UM VETOR------------------//
 function verificar_etapa1(){
@@ -38,6 +47,12 @@ function verificar_etapa1(){
 
     } else if (document.getElementById('etapa1_r6').checked){
         respostas.push(etapa1_r6.value);
+        console.log(respostas)
+        document.getElementById('formulario_etapa1').style.display = 'none'
+        document.getElementById('formulario_etapa2').style.display = 'flex'
+    
+    } else if (document.getElementById('etapa1_r7').checked){
+        respostas.push(etapa1_r7.value);
         console.log(respostas)
         document.getElementById('formulario_etapa1').style.display = 'none'
         document.getElementById('formulario_etapa2').style.display = 'flex'
@@ -192,6 +207,12 @@ function verificar_etapa5(){
         document.getElementById('formulario_etapa5').style.display = 'none'
         document.getElementById('resultado').style.display = 'flex'
 
+    } else if (document.getElementById('etapa5_r6').checked){
+        respostas.push(etapa5_r6.value);
+        console.log(respostas)
+        document.getElementById('formulario_etapa5').style.display = 'none'
+        document.getElementById('resultado').style.display = 'flex'
+
     } else {
         alert ('Selecione Uma Opção Antes de prosseguir !')
     }
@@ -199,146 +220,169 @@ function verificar_etapa5(){
     resultado();
 }
 
-// -------------VERIFICANDO AS RESPOSTAS QUE ESTÃO NO VETOR & COM BASE NELAS DAR UM RESULTADO(ESTILO)--------------//
+// -------------VERIFICANDO AS RESPOSTAS QUE ESTÃO NO VETOR & COM BASE NELAS DAR UMA PONTUAÇÃO AO ESTILO--------------//
 function resultado(){
 
-    // ---------------------------TRADICIONAL----------------------------------------//
-    if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Jeans e camiseta básica' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual'
-        ){       
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
+    if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)'){
+        tradicional += 1;
+        sofisticado += 1;
+        esportivo += 1;
 
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Jeans e camiseta básica' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
+    } else if (respostas[0] == 'Tons monocromáticos e discretos'){
+        sofisticado += 1;
 
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas discretas e sem muito detalhes' &&
-        respostas[2] == 'Não gosto de acessórios' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
+    } else if (respostas[0] == 'Cor de rosa e tons pastéis'){
+        romantico += 1;
+        esportivo += 1;
 
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Roupas discretas e sem muito detalhes' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
+    } else if (respostas[0] == 'Tons terrosos (bege, marrom, nude)'){
+        sofisticado += 1;
 
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas discretas e sem muito detalhes' &&
-        respostas[2] == 'Não gosto de acessórios' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
+    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)'){
+        tradicional += 1;
+        sofisticado += 1;
+        esportivo += 1;
 
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas discretas e sem muito detalhes' &&
-        respostas[2] == 'Não gosto de acessórios' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
-
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas discretas e sem muito detalhes' &&
-        respostas[2] == 'Não gosto de acessórios' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Tradicional`
-        document.getElementById('img_tradicional').style.display = "flex";
-
-    // ---------------------------ELEGANTE / SOFISTICADO----------------------------------------//
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Peças de Alfaiataria' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Sapatos Sociais'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
-        document.getElementById('img_elegante').style.display = "flex";
-
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Roupas Sociais, Ternos e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Sapatos Sociais'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
-        document.getElementById('img_elegante').style.display = "flex";
+    } else if (respostas[0] == 'Cores escuras'){
+        tradicional += 1;
+        sofisticado += 1;
+    }
     
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas Sociais, Ternos e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Sapatenis'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
-        document.getElementById('img_elegante').style.display = "flex";
 
-    } else if (respostas[0] == 'Cores Acromáticas (Preto, Branco, Cinza)' &&
-        respostas[1] == 'Roupas Sociais, Ternos e camisa' &&
-        respostas[2] == 'Prefiro jóias verdadeiras e semijoias, prezo por acessórios duráveis e de boa qualidade' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Sapatos Sociais'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
-        document.getElementById('img_elegante').style.display = "flex";
+    if (respostas[1] == 'Jeans e camiseta básica'){
+        tradicional +=1;
+        esportivo += 1;
+
+    }else if (respostas[1] == 'Roupas discretas e sem muito detalhes'){
+        tradicional += 1;
+        esportivo += 1;
+
+    }else if (respostas[1] == 'Peças com estampa'){
+        romantico += 1;
+        esportivo += 1;
+
+    }else if (respostas[1] == 'Peças de Alfaiataria'){
+        sofisticado += 1;
+
+    }else if (respostas[1] == 'Camisa e Bermuda/Short'){
+        romantico += 1;
+
+    }else if (respostas[1] == 'Roupas Sociais, (Ternos ou Camisas)'){
+        sofisticado += 1;
+    }
     
-    // ---------------------------ESPORTIVO / CASUAL----------------------------------------//
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Bermuda e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual' || respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Esportivo / Casual`
+
+    if (respostas[2] == 'Prefiro jóias verdadeiras e semijoias, prezo por acessórios duráveis e de boa qualidade'){
+        sofisticado += 1;
+
+    } else if (respostas[2] == 'Gosto de peças práticas e simples, acessórios naturais, artesanais ou couro'){
+        romantico += 1;
+
+    }else if (respostas[2] == 'Prefiro acessórios pequenos e discretos'){
+        tradicional += 1;
+        sofisticado += 1;
+        romantico += 1;
+
+    }else if (respostas[2] == 'Não uso acessórios'){
+        tradicional += 1;
+        romantico += 1;
+        esportivo += 1;
+    }
+   
+
+    if (respostas[3] == 'Prefiro roupas justas'){
+        tradicional += 1;
+        sofisticado += 1;
+
+    }else if (respostas[3] == 'Caimento mais Solto'){
+        esportivo += 1;
+        romantico += 1;
+
+    }else if (respostas[3] == 'Caimento Alinhado (tecidos leves)'){
+        tradicional += 1;
+        sofisticado += 1;
+        esportivo += 1;
+    }
+    
+    
+    if (respostas[4] == 'Sapato Social'){
+        sofisticado += 1;
+
+    }else if (respostas[4] == 'Sapatenis'){
+        romantico += 1;
+
+    }else if (respostas[4] == 'Tênis Esportivos'){
+        tradicional += 1;
+
+    }else if (respostas[4] == 'Tênis Casual'){
+        esportivo += 1;
+        tradicional += 1;
+
+    }else if (respostas[4] == 'Botas'){
+        romantico += 1;
+
+    }else if (respostas[4] == 'Mocassim'){
+        romantico += 1;
+        sofisticado += 1;
+        esportivo += 1;
+    }
+    
+// ---------------------------VERIFICANDO AS PONTUAÇÕES E APLICANDO O RESULTADO----------------------------------------------------
+    if (tradicional > sofisticado &&
+        tradicional > esportivo &&
+        tradicional > romantico)
+        {
+        text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('img_tradicional').style.display = "flex";
+
+    } else if (sofisticado > tradicional &&
+        sofisticado > esportivo &&
+        sofisticado > romantico)
+        {
+        text_resultado.innerHTML = `Seu estilo é: Elegante Sofisticado`
+        document.getElementById('img_elegante').style.display = "flex";
+
+    } else if (esportivo > tradicional &&
+        esportivo > sofisticado &&
+        esportivo > romantico)
+        {
+        text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
         document.getElementById('img_esportivo').style.display = "flex";
 
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Bermuda e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual' || respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Esportivo / Casual`
+    } else if (romantico > tradicional &&
+        romantico > sofisticado &&
+        romantico > esportivo)
+        {
+        text_resultado.innerHTML = `Seu estilo é: Romântico`
+        document.getElementById('img_romantico').style.display = "flex";
+
+
+// ---------------------------EM CASO DE EMPATE NAS PONTUAÇÕES----------------------------------------------------
+    } else if (tradicional == esportivo){
+        text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('img_tradicional').style.display = "flex";
+
+    } else if (tradicional == sofisticado){
+        text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('img_tradicional').style.display = "flex";
+
+    } else if (tradicional == romantico){
+        text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('img_tradicional').style.display = "flex";
+
+
+    } else if (sofisticado == esportivo){
+        text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
         document.getElementById('img_esportivo').style.display = "flex";
 
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Bermuda e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual' || respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Esportivo / Casual`
-        document.getElementById('img_esportivo').style.display = "flex";
+    } else if (sofisticado == romantico){
+        text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
+        document.getElementById('img_elegante').style.display = "flex";
 
-    } else if (respostas[0] == 'Cores neutras (preto, branco, azul marinho)' &&
-        respostas[1] == 'Bermuda e camisa' &&
-        respostas[2] == 'Prefiro acessórios pequenos e discretos' &&
-        respostas[3] == 'Caimento Alinhado (tecidos leves)' &&
-        respostas[4] == 'Tênis Casual' || respostas[4] == 'Tênis Esportivos'
-        ){
-        text_resultado.innerHTML = `Seu estilo é: Esportivo / Casual`
+    } else if (romantico == esportivo){
+        text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
         document.getElementById('img_esportivo').style.display = "flex";
 
     }
+    
 }

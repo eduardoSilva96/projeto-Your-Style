@@ -31,10 +31,10 @@
                         <a href="../index.html"><img src="../assets/icones/home.preto.png" width="12px"> Home</a>
                     </li>
                     <li>
-                        <a class="pagina_atual" href="discover-masculino.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Descubra</a>
+                        <a class="pagina_atual" href="discover-masculino.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Discover</a>
                     </li>
                     <li>
-                        <a href=""><img src="../assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
+                        <a href="./sobre-nos.html"><img src="../assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
                     </li>
 
                 </ul>
@@ -80,8 +80,18 @@
 
 
     <div class="container_form"  id="section1">
+
+        <div class="box_iniciar" id="iniciar_teste">
+            <div>
+                <a href="#section1">
+                    <button class="button_start" onclick="start()">Iniciar Teste</button>
+                </a>
+            </div>
+        </div>
+
+
         <!------------------Formulario ETAPA 1-------------------------->
-        <div class="box_form" id="formulario_etapa1">
+        <div class="box_form" id="formulario_etapa1" style="display: none">
             <!---Titulo do Formulario--->
             <div class="titulo_form">
                 <p>Em relação à cores de roupas, suas preferências são:</p>
@@ -114,6 +124,10 @@
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa1_r6" value="Cores Acromáticas (Preto, Branco, Cinza)"/>
                     <p>Cores Acromáticas (Preto, Branco, Cinza)</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa1_r7" value="Cores escuras"/>
+                    <p>Cores escuras</p>
                 </label>
                 <div class="area_button">
                     <a href="#section1">
@@ -155,8 +169,8 @@
                 </label>
 
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa2_r5" value="Bermuda e camisa"/>
-                    <p>Bermuda e camisa</p>
+                    <input type="radio" name="radio" id="etapa2_r5" value="Camisa e Bermuda/Short"/>
+                    <p>Camisa e Bermuda/Short</p>
                 </label>
 
                 <label class="label_radio">
@@ -165,8 +179,8 @@
                 </label>
 
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa2_r7" value="Roupas Sociais, Ternos e camisa"/>
-                    <p>Roupas Sociais, Ternos e camisa</p>
+                    <input type="radio" name="radio" id="etapa2_r7" value="Roupas Sociais, (Ternos ou Camisas)"/>
+                    <p>Roupas Sociais, (Ternos ou Camisas)</p>
                 </label>
 
                 <div class="area_button">
@@ -206,8 +220,8 @@
                     <p>Gosto de acessório que chama atenção, cores fortes, grandes ou diferentes</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa3_r5" value="Não gosto de acessórios"/>
-                    <p>Não gosto de acessórios</p>
+                    <input type="radio" name="radio" id="etapa3_r5" value="Não uso acessórios"/>
+                    <p>Não uso acessórios</p>
                 </label>
                 <div class="area_button">
                     <a href="#section1">
@@ -233,8 +247,8 @@
                     <p>Prefiro roupas justas</p>
                 </label>
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa4_r2" value="Roupas mais Folgadas"/>
-                    <p>Roupas mais Folgadas</p>
+                    <input type="radio" name="radio" id="etapa4_r2" value="Caimento mais Solto"/>
+                    <p>Caimento mais Solto</p>
                 </label>
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa4_r3" value="Caimento Alinhado (tecidos leves)"/>
@@ -264,8 +278,8 @@
             <!--- Grupo De Radios Em Column --->
             <div class="group_radio">
                 <label class="label_radio">
-                    <input type="radio" name="radio" id="etapa5_r1" value="Sapatos Sociais"/>
-                    <p>Sapatos Sociais</p>
+                    <input type="radio" name="radio" id="etapa5_r1" value="Sapato Social"/>
+                    <p>Sapato Social</p>
                 </label>
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa5_r2" value="Sapatenis"/>
@@ -282,6 +296,10 @@
                 <label class="label_radio">
                     <input type="radio" name="radio" id="etapa5_r5" value="Botas"/>
                     <p>Botas</p>
+                </label>
+                <label class="label_radio">
+                    <input type="radio" name="radio" id="etapa5_r6" value="Mocassim"/>
+                    <p>Mocassim</p>
                 </label>
                 <div class="area_button">
                     <a href="#section1">
@@ -301,6 +319,7 @@
             <div id="img_tradicional" class="box_img_resultado_tradicional" style="display: none;"></div> 
             <div id="img_elegante" class="box_img_resultado_elegante" style="display: none;"></div> 
             <div id="img_esportivo" class="box_img_resultado_esportivo" style="display: none;"></div> 
+            <div id="img_romantico" class="box_img_resultado_romantico" style="display: none;"></div> 
 
             <!--- Explicação sobre o estilo --->
             <div class="area_explicacao">
