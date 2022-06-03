@@ -14,13 +14,13 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    background: #ffffff; /* Cor da Raiz Principal da Barra de Rolagem */
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(53, 30, 88)); /* Cor da Raiz Principal da Barra de Rolagem */
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: rgb(99, 51, 117); /* Cor do scroll Thub */
+    background-color: rgb(255, 255, 255); /* Cor do scroll Thub */
     border-radius: 20px; /* Curvatura do Scroll thumb */
-    border: 3px solid #825e91; /*Criar uma Borda com cor no Scroll thumb*/
+    border: 3px solid #000000; /*Criar uma Borda com cor no Scroll thumb*/
   }
 
 /*---Estilizando o elemento pai da navegação---*/
@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
 }
 .footer .container{
     /* border-radius: 50px 50px 0px 0px; */
-    background-image: linear-gradient(rgb(31 31 31), rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(53, 30, 88));
     padding: 30px 0px 30px 0px;
     display: flex;
     flex-direction: column;
