@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/login&cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <!---------------------------- HEADER/NAVEGAÇÃO ----------------------------------------------------------->
+    <div class="header">
+        <div class="container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="../assets/img/logo.svg" alt="" width="80px">
+            </div>
+
+            <!-- 1° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Home, look book, Guia)-->
+            <div class="navegacao1">
+                <ul class="navbar1">
+                    <li>
+                        <a href="../index.html"><img src="../assets/icones/home.preto.png" width="12px"> Home</a>
+                    </li>
+                    <li>
+                        <a href="discover-masculino.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Discover</a>
+                    </li>
+                    <li>
+                        <a href="./sobre-nos.html"><img src="../assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 2° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Login e Cadastro)-->
+            <div class="navegacao2">
+                <ul class="navbar2">
+                    <li>
+                        <a href="./login.html">Login</a>
+                    </li>
+                    <span class="pipe">|</span>
+                    <li>
+                        <a class="pagina_atual" href="./cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner_area">
+        <div class="container_login_cadastro">
+            <div class="box_login">
+                <div> <img src="" alt=""></div>
+                <div class="text"> 
+                    <p>Já tem uma conta ?<br>Faça o Login</p>
+                </div>
+                <a href="./login.html"><button class="button_lc">Login</button></a>
+            </div>
+            <div class="box_cadastro">
+                <div class="title">
+                    <h2>Crie uma Conta</h2>
+                    <p>Insira um email e senha para se registrar</p>
+                </div>
+
+                <div class="area_das_inputs">
+                    <div class="div_input">
+                        <input id="nome_input" placeholder="Seu Nome">
+                    </div>
+
+                    <div class="div_input">
+                        <input id="email_input" placeholder="Seu Email">
+                    </div>
+
+                    <div class="div_input">
+                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira uma Senha">
+                    </div>
+
+                    <div class="div_input">
+                        <input type="password" id="confirmacao_senha_input" class="inp_senha" placeholder="Confirme a Senha">
+                    </div>
+                    
+                    <div class="div_select">
+                        <select name="" id="select_estilos">
+                            <option selected style="color: gray;">Informe seu Estilo</option>
+                            <option value="Tradicional">Tradicional</option>
+                            <option value="Esportivo Casual">Esportivo Casual</option>
+                            <option value="Elegante Sofisticado">Elegante Sofisticado</option>
+                            <option value="Romântico">Romântico</option>
+                        </select>
+                    </div>                          
+                </div><br>
+                <button class="button_lc" onclick="cadastrar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
+            alert('Preencha todos os campos para prosseguir')
+
+            return false;
+        }
+        else {
+
+        
+
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    alert('cadastro feito com sucesso !');
+
+                    setTimeout(() => {
+                        window.location = "./login.html";
+                    }, "2000")
+                    
+                    limparFormulario();
+                    
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                
+            });
+
+            return false;
+        }  
+    }
+
+
+</script>

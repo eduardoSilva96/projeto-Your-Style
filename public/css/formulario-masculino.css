@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+body::-webkit-scrollbar {
+    width: 14px; /*Largura da Barra de rolagem */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255); /* Cor da Raiz Principal da Barra de Rolagem */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(68, 68, 68); /* Cor do scroll Thub */
+    border-radius: 20px; /* Curvatura do Scroll thumb */
+    border: 3px solid #a9a9a9; /*Criar uma Borda com cor no Scroll thumb*/
+  }
+  
+
 .background{
     background-image: url('../assets/img/background-discover2.png');
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(255, 255, 255);
     background-size: cover;
 }
 
@@ -27,7 +42,6 @@
     border-radius: 20px;
     width: 65%;
     height: 60vh;
-    margin-bottom: 30px;
     color: rgb(38, 69, 135);
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
@@ -40,6 +54,7 @@
     background-color: aliceblue;
     box-shadow: 0 0 3em rgb(0, 0, 0);
     border-radius: 20px;
+    margin-top: 30px;
     width: 50%;
     height: 10vh;
 }
@@ -73,6 +88,7 @@
     box-shadow: 0 0 3em rgb(0, 0, 0);
     border-radius: 20px;
     width: 65%;
+    margin-top: 30px;
     padding-bottom: 30px;
 }
 .titulo_form{
@@ -140,13 +156,14 @@ input[type="radio"]:checked{
 }
 
 .loading-div {
-    width: 50px;
-    margin: auto;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .loading-div img {
-    height: 50px;
-    width: 50px;
+    height: 180px;
+    width: 180px;
 }
 
 .box_img_resultado_tradicional{background-image: url('../assets/img/Estilo-tradicional.jpg'); background-size: cover; width: 50vw; height: 53vh; border-radius: 20px;}

@@ -1,8 +1,27 @@
+body{
+    background-image: url('../assets/img/background-login.png');
+    background-size: cover;
+    background-color: #fff;
+}
+/*-------------------------SCROLLBAR--------------------------------*/
+body::-webkit-scrollbar {
+    width: 14px; /*Largura da Barra de rolagem */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #fff; /* Cor da Raiz Principal da Barra de Rolagem */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(128, 102, 93); /* Cor do scroll Thub */
+    border-radius: 20px; /* Curvatura do Scroll thumb */
+    border: 3px solid #c6a989; /*Criar uma Borda com cor no Scroll thumb*/
+  }
+  
 .banner_area{
     margin: 0;
     display: flex;
     padding: 50px;
-    background-color: beige;
     justify-content: center;
     align-items: center;
     height: 80vh;
@@ -21,29 +40,35 @@
     justify-content: center;
     align-items: center;
     padding: 0px 20px 0px 0px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.787);
     width: 25vw;
     border-radius: 40px 0px 0px 40px;
     color: rgb(50, 50, 50);
 }
-
+.text{
+    font-weight: 800;
+    text-align: center;
+    font-size: 19px;
+}
 .box_cadastro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(56, 55, 55);
+    background-color: rgba(0, 0, 0, 0.838);
     width: 45vw;
     border-radius: 0px 40px 40px 0px;
     color: white;
 }
-
+.title{
+    text-align: center;
+}
 .area_das_inputs input, select{
     width: 27vw;
     height: 5vh;
     border-radius: 10px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgb(255, 255, 255);
     outline: none;
 }
 .div_input, .div_select{
@@ -56,6 +81,9 @@
     border-radius: 10px;
     border: none;
     transition: all 0.60s;
+    background-color: rgb(163, 131, 119);
+    color: #fff;
+    font-weight: bolder;
 }
 .button_lc:hover{
     cursor: pointer;

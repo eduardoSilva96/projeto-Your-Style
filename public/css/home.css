@@ -3,18 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Pacifico&family=Rubik+Microbe&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Rubik+Mono+One&display=swap');
+
+/*-------------------------SCROLLBAR--------------------------------*/
+body::-webkit-scrollbar {
+    width: 14px; /*Largura da Barra de rolagem */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(53, 30, 88)); /* Cor da Raiz Principal da Barra de Rolagem */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255); /* Cor do scroll Thub */
+    border-radius: 20px; /* Curvatura do Scroll thumb */
+    border: 3px solid #000000; /*Criar uma Borda com cor no Scroll thumb*/
+  }
+
+  
 /* ----------------  Informativos (Boas Vindas) (Utilidades) ----------------- */
 .container-corpo{
     border-radius: 100px 100px 0px 0px;
     /* background-image: linear-gradient(#fff, rgb(87, 87, 87),rgb(42, 42, 42), #000); */
     background-color: #fff;
     padding-bottom: 45px; 
-}
-.seta_turistica{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 45px;
 }
 .campo_text_boasVindas{
     display: flex;
@@ -81,4 +92,5 @@
     display: flex;
     margin-top: 150px;
 }
+
 

@@ -181,44 +181,52 @@ function verificar_etapa5(){
         respostas.push(etapa5_r1.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
 
     } else if (document.getElementById('etapa5_r2').checked){
         respostas.push(etapa5_r2.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
         
     } else if (document.getElementById('etapa5_r3').checked){
         respostas.push(etapa5_r3.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
 
     } else if (document.getElementById('etapa5_r4').checked){
         respostas.push(etapa5_r4.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
 
     } else if (document.getElementById('etapa5_r5').checked){
         respostas.push(etapa5_r5.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
 
     } else if (document.getElementById('etapa5_r6').checked){
         respostas.push(etapa5_r6.value);
         console.log(respostas)
         document.getElementById('formulario_etapa5').style.display = 'none'
-        document.getElementById('resultado').style.display = 'flex'
+        document.getElementById('loading_resultado').style.display = 'flex'
 
     } else {
         alert ('Selecione Uma Opção Antes de prosseguir !')
     }
 
+    setInterval(function () {
+        document.getElementById("loading_resultado").style.display = "none";
+        document.getElementById("resultado").style.display = "flex";
+    }, 4000);
+
     resultado();
 }
+
+
+
 
 // -------------VERIFICANDO AS RESPOSTAS QUE ESTÃO NO VETOR & COM BASE NELAS DAR UMA PONTUAÇÃO AO ESTILO--------------//
 function resultado(){
@@ -333,6 +341,7 @@ function resultado(){
         tradicional > romantico)
         {
         text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_tradicional').style.display = "flex";
 
     } else if (sofisticado > tradicional &&
@@ -340,6 +349,7 @@ function resultado(){
         sofisticado > romantico)
         {
         text_resultado.innerHTML = `Seu estilo é: Elegante Sofisticado`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_elegante').style.display = "flex";
 
     } else if (esportivo > tradicional &&
@@ -347,6 +357,7 @@ function resultado(){
         esportivo > romantico)
         {
         text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_esportivo').style.display = "flex";
 
     } else if (romantico > tradicional &&
@@ -354,33 +365,40 @@ function resultado(){
         romantico > esportivo)
         {
         text_resultado.innerHTML = `Seu estilo é: Romântico`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_romantico').style.display = "flex";
 
 
 // ---------------------------EM CASO DE EMPATE NAS PONTUAÇÕES----------------------------------------------------
     } else if (tradicional == esportivo){
         text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_tradicional').style.display = "flex";
 
     } else if (tradicional == sofisticado){
         text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_tradicional').style.display = "flex";
 
     } else if (tradicional == romantico){
         text_resultado.innerHTML = `Seu estilo é: Tradicional`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_tradicional').style.display = "flex";
 
 
     } else if (sofisticado == esportivo){
         text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_esportivo').style.display = "flex";
 
     } else if (sofisticado == romantico){
         text_resultado.innerHTML = `Seu estilo é: Elegante / Sofisticado`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_elegante').style.display = "flex";
 
     } else if (romantico == esportivo){
         text_resultado.innerHTML = `Seu estilo é: Esportivo Casual`
+        document.getElementById('instrucao').style.display = "none";
         document.getElementById('img_esportivo').style.display = "flex";
 
     }

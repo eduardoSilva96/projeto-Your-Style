@@ -44,11 +44,11 @@
             <div class="navegacao2">
                 <ul class="navbar2">
                     <li>
-                        <a href="">Login</a>
+                        <a href="./login.html">Login</a>
                     </li>
                     <span class="pipe">|</span>
                     <li>
-                        <a href="">Cadastro</a>
+                        <a href="./cadastro.html">Cadastro</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
     </div>
 
     <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
-    <div class="banner_explicativo">
+    <div class="banner_explicativo" id="instrucao">
         <div class="text_discover1">
             <div>
                 <p>Descubra seu Estilo Respondendo nosso formulario</p>
@@ -81,6 +81,7 @@
 
     <div class="container_form"  id="section1">
 
+        <!------------------INICIAR O QUIZ-------------------------->
         <div class="box_iniciar" id="iniciar_teste">
             <div>
                 <a href="#section1">
@@ -88,7 +89,6 @@
                 </a>
             </div>
         </div>
-
 
         <!------------------Formulario ETAPA 1-------------------------->
         <div class="box_form" id="formulario_etapa1" style="display: none">
@@ -302,11 +302,19 @@
                     <p>Mocassim</p>
                 </label>
                 <div class="area_button">
-                    <a href="#section1">
+                    <a href="#cabecalho">
                         <button onclick="verificar_etapa5()">Continuar</button>
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!------------------------LOADING------------------------------->
+        <div class="box_form"  id="loading_resultado" style="display: none">
+           <div class="loading-div">  
+                <h3>Verificando...</h3>
+                <img src="../assets/verificando.gif" alt="">
+           </div>
         </div>
 
         <!------------------------RESULTADO------------------------------->
