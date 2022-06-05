@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <script src="../js/funcoes.js"></script>
+    <title>Guia</title>
+</head>
+
+<body class="background">
+
+    <!---------------------------- HEADER/NAVEGAÇÃO ----------------------------------------------------------->
+    <div class="header">
+        <div class="container">
+
+            <!-- Perfil -->
+            <div id="div_usuarioLogado">
+                
+            </div>
+
+            <!-- 1° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Home, look book, Guia)-->
+            <div class="navegacao1">
+                <ul class="navbar1">
+                    <li>
+                        <a class="pagina_atual" href="../index.html"><img src="../assets/icones/home.preto.png" width="12px"> Guia</a>
+                    </li>
+                    <li>
+                        <a href="discover-masculino.html"> <img src="../assets/icones/lupa.preto.png" width="13px"> Look Book</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 2° CONJUNTO DE ITENS DA NAVEGAÇÃO  (sair)-->
+            <div class="navegacao2">
+                <ul class="navbar2">
+                    <li>
+                        <a href="../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
+    
+    
+    <!---------------------------------RODAPÉ DO SITE------------------------------------------>
+    <div class="footer">
+        <div class="container">
+            <div class="itens_redesSociais">
+
+                <img class="effect_scale" src="../assets/icones/facebook.png" alt="" width="30px">
+                <img class="effect_scale"  src="../assets/icones/twitter.png" alt="" width="30px">
+                <img class="effect_scale" src="../assets/icones/instagram.png" alt="" width="30px">
+            </div>
+            <div class="links_rodape">
+                <a href="">Sobre Nós</a> - <a href="">Referências</a> - <a href="">Tendências</a>
+            </div>
+            <div class="links_rodape">
+                <a href="">Politica de Privacidade</a> - <a href="">Termos de Uso</a>
+            </div>
+            <div class="text_direitos">
+                @ 2022 Your Style
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    var nomeheader = sessionStorage.getItem('NOME_USUARIO');
+    div_usuarioLogado.innerHTML= `Olá, <span class="nome_do_usuario">${nomeheader}</span> `
+</script>
+

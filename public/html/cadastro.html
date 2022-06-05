@@ -85,10 +85,10 @@
                     <div class="div_select">
                         <select name="" id="select_estilos">
                             <option selected style="color: gray;">Informe seu Estilo</option>
-                            <option value="Tradicional">Tradicional</option>
-                            <option value="Esportivo Casual">Esportivo Casual</option>
-                            <option value="Elegante Sofisticado">Elegante Sofisticado</option>
-                            <option value="Romântico">Romântico</option>
+                            <option value='1'>Tradicional</option>
+                            <option value='2'>Esportivo Casual</option>
+                            <option value='3'>Elegante Sofisticado</option>
+                            <option value='4'>Romântico</option>
                         </select>
                     </div>                          
                 </div><br>
@@ -108,16 +108,15 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var estiloVar = select_estilos.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || estiloVar == "") {
 
             alert('Preencha todos os campos para prosseguir')
 
             return false;
         }
         else {
-
-        
 
             // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
@@ -130,19 +129,19 @@
                     // Agora vá para o arquivo routes/usuario.js
                     nomeServer: nomeVar,
                     emailServer: emailVar,
-                    senhaServer: senhaVar
+                    senhaServer: senhaVar,
+                    estiloServer: estiloVar
                 })
             }).then(function (resposta) {
 
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    cardErro.style.display = "block";
 
                     alert('cadastro feito com sucesso !');
 
                     setTimeout(() => {
-                        window.location = "./login.html";
+                        window.location = "login.html";
                     }, "2000")
                     
                     limparFormulario();

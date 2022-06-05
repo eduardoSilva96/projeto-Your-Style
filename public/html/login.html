@@ -74,6 +74,16 @@
                     <div class="div_input">
                         <input type="password" id="senha_input" class="inp_senha" placeholder="Insira a Senha">
                     </div>
+
+                    <div class="div_select">
+                        <select id="select_estilos" required>
+                            <option value='' style="color: gray;">Selecione seu Estilo</option>
+                            <option value='Tradicional'>Tradicional</option>
+                            <option value='Esportivo Casual'>Esportivo Casual</option>
+                            <option value='Elegante Sofisticado'>Elegante Sofisticado</option>
+                            <option value='Romântico'>Romântico</option>
+                        </select>
+                    </div>
                                            
                 </div>
                 <br>
@@ -88,66 +98,76 @@
 <script>
 
     function entrar() {
-        
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+        var estiloVar = select_estilos.value;
 
         if (emailVar == "" || senhaVar == "") {
             alert('Preencha os campos para prosseguir')
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
 
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
+        } else if (estiloVar == ''){
+            alert('Selecione seu Estilo para entrar.')
 
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
+        } else {
+        
+            console.log("FORM LOGIN: ", emailVar);
+            console.log("FORM SENHA: ", senhaVar);
+            console.log("FORM ESTILO: ", estiloVar);
+
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    estiloServer: estiloVar
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+                        sessionStorage.ESTILO_USUARIO = json.estilo;
+
+                        if (select_estilos.value == "Tradicional"){
+                            window.location.href = "guia-tradicional.html"
+
+                        } else if (select_estilos.value == "Esportivo Casual"){
+                            window.location.href = "guia-esportivo-casual.html"
+
+                        } else if (select_estilos.value == "Elegante Sofisticado"){
+                            window.location.href = "guia-elegante-sofisticado.html"
+                            
+                        } else if (select_estilos.value == "Romântico"){
+                            window.location.href = "guia-romantico.html"
+                            
+                        }
+                        
+                    });
+
+                } else {
+                    console.log("Houve um erro ao tentar realizar o login!");
+                    alert('Você não tem uma conta com esse estilo !')             
+                }
+
+            }).catch(function (erro) {
+                console.log(erro);
             })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
 
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
+            return false;
+        }
     }
 
     function sumirMensagem() {
