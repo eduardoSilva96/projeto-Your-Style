@@ -75,6 +75,30 @@ body::-webkit-scrollbar {
     padding: 7px 0px 7px 0px;
 }
 
+
+/* -----------Aviso no final do cadastro------------- */
+.div_ajuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div_ajuda a{
+    text-decoration: none;
+    color: #e8c8a6;
+    font-weight: bolder;
+    transition: all 0.40s;
+}
+.div_ajuda a:hover{
+    transform: scale(1.1);
+}
+.div_ajuda span{
+    padding-top: 30px;
+    padding-bottom: 8px;
+}
+/* ---------------------------------- ----------*/
+
+
 .button_lc{
     width: 10vw;
     height: 6vh;

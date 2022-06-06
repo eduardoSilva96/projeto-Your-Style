@@ -28,10 +28,11 @@ body::-webkit-scrollbar {
     height: 50vh;
     text-align: center;
 }
+
 .container_mvv{
     display: flex;
     justify-content: space-around;
-    border-radius: 80px;
+    border-radius: 80px 80px 0px 0px;
     background-color: rgb(255, 255, 255);
 }
 

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header-footer-account.css">
+    <link rel="stylesheet" href="../css/guia.css">
+    <script src="../js/funcoes.js"></script>
+    <title>Guia</title>
+</head>
+
+<body class="background-body">
+
+    <!---------------------------- HEADER/NAVEGAÇÃO ----------------------------------------------------------->
+    <div class="header">
+        <div class="container">
+
+            <!-- Perfil -->
+            <div id="div_usuarioLogado">
+                
+            </div>
+
+            <!-- 1° CONJUNTO DE ITENS DA NAVEGAÇÃO  (Home, look book, Guia)-->
+            <div class="navegacao1">
+                <ul class="navbar1">
+                    <li>
+                        <img src="../assets/icones/cabide-preto.png" width="25px"> 
+                        <a class="pagina_atual" href="guia-esportivo-casual.html">Guia</a>
+                    </li>
+                    <li>
+                        <img src="../assets/icones/book.preto.png" width="20px"> 
+                        <a href="lookbook-esportivo-casual.html"> Look Book</a>
+                    </li>
+                    <li>
+                        <img src="../assets/icones/loja.png" width="20px"> 
+                        <a href="lojas-recomendadas-esportivo-casual.html"> Lojas</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 2° CONJUNTO DE ITENS DA NAVEGAÇÃO  (sair)-->
+            <div class="navegacao2">
+                <ul class="navbar2">
+                    <li>
+                        <a href="../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
+    <div class="corpo-guia">
+        <div class="area-menu-lateral">
+            <div class="menu-lateral">
+                <div>
+                    <h3 style="font-size: 18px;">Seu Estilo:<br>ESPORTIVO CASUAL</h3>
+                </div>
+                <div id="titulo-resumo" class="item-menu-lateral" onclick="onclick_resumo()" style="background-color:#fff; color:black;">
+                    <h3>Resumo</h3>
+                </div>
+                <div id="titulo-dicas" class="item-menu-lateral" onclick="onclick_dicas()">
+                    <h3>Dicas</h3>
+                </div>
+            </div>
+        </div>
+
+        
+<!---------------------------------RESUMO------------------------------------------>
+        <div class="area-de-exibicao" id="resumo" style="display: flex;">
+            <div  class="resumo-display">
+
+                <div class="title-resumo">
+                    <h2>Esportivo Casual</h2>
+                </div>
+                <div class="text-resumo">
+                    <p>
+                        Quando o assunto são as combinações de cores favoritas, o estilo esportivo/casual<br> 
+                        não gosta muito de perder tempo pensando em combinações.<br>
+                        Ele compra quando precisa, não gosta de perder tempo e gosta de facilidades.<br>
+                        <br>
+                        Até na hora de pensar nos tecidos prefere os que são mais fáceis de cuidar, <br>
+                        Portanto, a roupa preferida é aquela que é prática e simples e, claro, <br>
+                        isso vale também para os acessórios (bolsas, pastas, carteiras, cintos, pulseiras, óculos de sol,) <br>
+                        e para os sapatos, que essencialmente precisam ser confortáveis.<br>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+<!---------------------------------DICAS------------------------------------------>
+        <div class="area-de-exibicao" id="dicas" style="display: none;">
+            <div class="dicas-display">
+
+                <div class="title-dicas">
+                    <h2>Dicas</h2>
+                </div>
+                <div class="area-video">
+                    <iframe class="video" width="350px" height="196px" src="https://www.youtube.com/embed/35eZzREOJOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                 
+                    <iframe class="video" width="350px" height="196px" src="https://www.youtube.com/embed/_Vyiy__NLmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="area-video">
+                    <iframe class="video" width="350px" height="196px" src="https://www.youtube.com/embed/Jdh7biPoEJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" width="350px" height="196px" src="https://www.youtube.com/embed/NeOOi_Ejv4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                                
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    <!---------------------------------RODAPÉ DO SITE------------------------------------------>
+    <div class="footer">
+        <div class="container">
+            <div class="itens_redesSociais">
+
+                <img class="effect_scale" src="../assets/icones/facebook.png" alt="" width="30px">
+                <img class="effect_scale"  src="../assets/icones/twitter.png" alt="" width="30px">
+                <img class="effect_scale" src="../assets/icones/instagram.png" alt="" width="30px">
+            </div>
+            <div class="links_rodape">
+                <a href="../index.html">Home</a> - <a href="../html/discover-masculino.html">Discover</a> - <a href="../html/sobre-nos.html">Sobre Nós</a>
+            </div>
+            <div class="links_rodape">
+                <a href="">Politica de Privacidade</a> - <a href="">Termos de Uso</a>
+            </div>
+            <div class="text_direitos">
+                @ 2022 Your Style
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    var nomeheader = sessionStorage.getItem('NOME_USUARIO');
+    div_usuarioLogado.innerHTML= `Olá, <span class="nome_do_usuario">${nomeheader}</span> `
+
+    function onclick_resumo(){
+        document.getElementById('titulo-dicas').style.backgroundColor = 'rgb(26, 51, 101)'
+        document.getElementById('titulo-dicas').style.color = 'white'
+        document.getElementById('titulo-resumo').style.backgroundColor = 'white'
+        document.getElementById('titulo-resumo').style.color = 'black'
+        document.getElementById('dicas').style.display = 'none'
+        document.getElementById('resumo').style.display = 'flex'
+    }
+
+    function onclick_dicas(){
+        document.getElementById('titulo-resumo').style.backgroundColor = 'rgb(26, 51, 101)'
+        document.getElementById('titulo-resumo').style.color = 'white'
+        document.getElementById('titulo-dicas').style.backgroundColor = 'white'
+        document.getElementById('titulo-dicas').style.color = 'black'
+        document.getElementById('resumo').style.display = 'none'
+        document.getElementById('dicas').style.display = 'flex'
+    }
+</script>
+

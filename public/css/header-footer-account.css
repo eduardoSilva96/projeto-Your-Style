@@ -47,6 +47,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 10vw;
+    margin-left: 20px;
 }
 
 .navbar2 li {
@@ -57,7 +60,7 @@
 .navegacao1 a {
     text-decoration: none;
     color: #000;
-    margin-left: 60px;
+    text-align: center;
 }
 
 .navegacao2 a {
@@ -68,24 +71,22 @@
 }
 
 .pagina_atual {
-    color: rgb(53, 30, 88) !important;
+    color: rgb(99, 95, 212) !important;
     font-weight: bolder;
 }
 
 /*---Colocando efeito ao passar o cursor nos itens da navegação---*/
 .header .container a:hover {
-    color: rgb(53, 30, 88);
+    color: rgb(99, 95, 212);
     font-weight: bolder;
 }
 
-.pipe {
-    cursor: default;
-    transition: 1s;
+/* ----------------------------------------------------------------------------------------------------------------------- */
+.nome_do_usuario{
+    color: #000;
+    font-weight: 700;
+    font-size: 17px;
 }
-.pipe:hover {
-    transform: rotate(360deg);
-}
-
 /* ----------------------------- RODAPÉ (FOOTER)------------------------------------------------------------------------ */
 
 .footer{
