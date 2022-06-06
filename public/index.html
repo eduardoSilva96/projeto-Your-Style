@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header-footer.css">
-    <script src="/src/models/usuarioModel.js"></script>
     <title>Your Style - Home</title>
 </head>
 
-<body>
+<body onload="qtdUsuarios()">
     <!---------------------------- HEADER/NAVEGAÇÃO ----------------------------------------------------------->
     <div class="header">
         <div class="container">
@@ -26,13 +25,16 @@
             <div class="navegacao1">
                 <ul class="navbar1">
                     <li>
-                        <a class="pagina_atual" href="index.html"><img src="./assets/icones/home.preto.png" width="12px"> Home</a>
+                        <a class="pagina_atual" href="index.html"><img src="./assets/icones/home.preto.png"
+                                width="12px"> Home</a>
                     </li>
                     <li>
-                        <a href="./html/discover-masculino.html"> <img src="./assets/icones/lupa.preto.png" width="13px"> Discover</a>
+                        <a href="./html/discover-masculino.html"> <img src="./assets/icones/lupa.preto.png"
+                                width="13px"> Discover</a>
                     </li>
                     <li>
-                        <a href="./html/sobre-nos.html"><img src="./assets/icones/Sobrenos-icon.png" width="16px"> Sobre Nós</a>
+                        <a href="./html/sobre-nos.html"><img src="./assets/icones/Sobrenos-icon.png" width="16px"> Sobre
+                            Nós</a>
                     </li>
 
                 </ul>
@@ -54,12 +56,12 @@
     </div>
 
     <!--------------------------------------------------CORPO DO SITE--------------------------------------------------------------------->
-    <!-- Banner Inicial da Página (Ilustração)-->   
+    <!-- Banner Inicial da Página (Ilustração)-->
     <img class="img-1" src="./assets/img/Banner.png" width="100%">
 
     <!-- Parte Principal do Conteúdo da Home -->
     <div class="container-corpo">
-        
+
         <!------- Texto de Boas Vindas --------->
         <div class="campo_text_boasVindas">
             <p class="boas_vindas" id="usuarios_totais">
@@ -78,12 +80,13 @@
                 <div class="information_guia">
                     <span class="text_information_group_left">
                         <b>Guia</b><br>
-                        O Guia é destinado para usuários com conta na Your Style, pois essa Funcionalidade é com base no seu estilo,
+                        O Guia é destinado para usuários com conta na Your Style, pois essa Funcionalidade é com base no
+                        seu estilo,
                         Trazendo as melhores dicas, e instruções sobre as peças de roupa.
                     </span>
                     <img src="./assets/icones/cabide.png" alt="" width="70px" height="70px">
                 </div>
-                
+
                 <div class="information_lookBook">
                     <span class="text_information_group_left">
                         <b>Look Book</b><br>
@@ -91,25 +94,25 @@
                         Através de Fotos para que você se inspire.
                     </span>
                     <img src="./assets/icones/icon-lookbook.png" alt="" width="70px" height="70px">
-                </div> 
+                </div>
             </div>
 
             <!------- Ilustração da YourStyle no Meio das Informações --------->
             <div class="ilustration_quite">
-            <div class="ilustration">
+                <div class="ilustration">
                     <img src="./assets/img/ilustration.png" alt="">
-                </div> 
+                </div>
             </div>
 
             <!------- Grupo de informações (Utilidades) Direito --------->
             <div class="group_information_right">
 
-                <div class="information_random">           
+                <div class="information_random">
                     <img src="./assets/icones/icon-loja.png" alt="" width="70px" height="70px">
-                    <span class="text_information_group_right">                      
+                    <span class="text_information_group_right">
                         <b>Lojas Recomendadas</b><br>
                         O (Guia) Vem trazendo junto a recomendações de Lojas com base em seu estilo !
-                    </span>                
+                    </span>
                 </div>
 
                 <div class="information_discover">
@@ -118,8 +121,8 @@
                         <b>Discover</b><br>
                         Não sabe seu Estilo ?<br>
                         Não se preocupe, a Your Style ajuda você descobrir :)
-                    </span>              
-                </div> 
+                    </span>
+                </div>
             </div>
 
         </div>
@@ -131,11 +134,12 @@
         <div class="container">
             <div class="itens_redesSociais">
                 <img class="effect_scale" src="./assets/icones/facebook.png" alt="" width="30px">
-                <img class="effect_scale"  src="./assets/icones/twitter.png" alt="" width="30px">
+                <img class="effect_scale" src="./assets/icones/twitter.png" alt="" width="30px">
                 <img class="effect_scale" src="./assets/icones/instagram.png" alt="" width="30px">
             </div>
             <div class="links_rodape">
-                <a href="../index.html">Home</a> - <a href="../html/discover-masculino.html">Discover</a> - <a href="../html/sobre-nos.html">Sobre Nós</a>
+                <a href="../index.html">Home</a> - <a href="../html/discover-masculino.html">Discover</a> - <a
+                    href="../html/sobre-nos.html">Sobre Nós</a>
             </div>
             <div class="links_rodape">
                 <a href="">Politica de Privacidade</a> - <a href="">Termos de Uso</a>
@@ -150,3 +154,38 @@
 
 </html>
 
+<script>
+    var qtd = 0
+
+    function qtdUsuarios() {
+        fetch("/usuarios/qtdUsuarios", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    qtd = json.resultado.length
+                    usuarios_totais.innerHTML = `Já temos ${qtd} Usuarios Cadastrados`
+
+                });
+
+            } else {
+                console.log("Houve um erro ao tentar realizar o Select!");
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+</script>

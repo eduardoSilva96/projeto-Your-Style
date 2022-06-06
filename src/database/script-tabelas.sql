@@ -27,5 +27,11 @@ insert into estilo values
 (null, 'Elegante Sofisticado'),
 (null, 'Romântico');
 
+insert into usuario values
+(null, 'Eduardo', 'eduardo@gmail.com', '123', 1),
+(null, 'Rui', 'rui@gmail.com', '123', 2),
+(null, 'Marlon', 'marlon@gmail.com', '123', 3),
+(null, 'Luiz', 'luiz@gmail.com', '123', 4);
+
 select * from usuario join estilo on fkEstilo = idEstilo;
 select * from estilo;
