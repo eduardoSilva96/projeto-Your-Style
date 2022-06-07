@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <link rel="stylesheet" href="../css/login&cadastro.css">
+    <link rel="stylesheet" href="../css/alerta-personalizado.css">
+    <script src="../js/limpar-erro.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -64,19 +66,21 @@
                     <h2>Bem vindo novamente</h2>
                     <p></p>
                 </div>
+                <!-- mensagem de erro desligada, só liga quando da Problema -->
+                <div class="mensagem-de-erro" id="mensagem_erro" style="display: none;"></div>
 
                 <div class="area_das_inputs">
 
                     <div class="div_input">
-                        <input id="email_input" placeholder="Seu Email">
+                        <input id="email_input" placeholder="Seu Email" onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_input">
-                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira a Senha">
+                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira a Senha"  onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_select">
-                        <select id="select_estilos" required>
+                        <select id="select_estilos" required onclick="corrigir_erro()">
                             <option value='' style="color: gray;">Selecione seu Estilo</option>
                             <option value='Tradicional'>Tradicional</option>
                             <option value='Esportivo Casual'>Esportivo Casual</option>
@@ -104,11 +108,33 @@
         var estiloVar = select_estilos.value;
 
         if (emailVar == "" || senhaVar == "") {
-            alert('Preencha os campos para prosseguir')
+            mensagem_erro.innerHTML = `Preencha Todos os Campos !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("email_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('email_input').style.border="2px solid red"
+            document.getElementById("senha_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('senha_input').style.border="2px solid red"
             return false;
 
+        }else if (emailVar.indexOf("@gmail.com") == -1 &&
+                emailVar.indexOf("@outlook.com") == -1 &&
+                emailVar.indexOf("@hotmail.com") == -1 &&
+                emailVar.indexOf("@yahoo.com") == -1 &&
+                emailVar.indexOf("@sptech.com") == -1 &&
+                emailVar.indexOf("@terra.com") == -1 &&
+                emailVar.indexOf("@sptrans.com") == -1){
+
+            mensagem_erro.innerHTML = `E-mail Inválido !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("email_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('email_input').style.border="2px solid red"
+            
+
         } else if (estiloVar == ''){
-            alert('Selecione seu Estilo para entrar.')
+            mensagem_erro.innerHTML = `Selecione um estilo para entrar`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("select_estilos").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById("select_estilos").style.border="2px solid red"
 
         } else {
         
@@ -159,7 +185,10 @@
 
                 } else {
                     console.log("Houve um erro ao tentar realizar o login!");
-                    alert('Você não tem uma conta com esse estilo !')             
+                    mensagem_erro.innerHTML = `Você não tem uma conta com esse Estilo !`
+                    document.getElementById("mensagem_erro").style.display="flex";
+                    document.getElementById("select_estilos").style.backgroundColor="rgb(255, 154, 154)";
+                    document.getElementById("select_estilos").style.border="2px solid red"
                 }
 
             }).catch(function (erro) {

@@ -1,8 +1,5 @@
 
 /* ------------Fontes Importadas do google fontes------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Pacifico&family=Rubik+Microbe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Rubik+Mono+One&display=swap');
 
 /*-------------------------SCROLLBAR--------------------------------*/
 body::-webkit-scrollbar {
@@ -37,11 +34,11 @@ body::-webkit-scrollbar {
 }
 .boas_vindas{
     width: 50%;
-    padding: 20px 0px 20px 0px;
-    border-radius: 20px;
-    color: rgb(101, 56, 128);
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 20px;
+    padding: 0px 0px 30px 0px;
+    color: rgb(104, 104, 104);
+    font-size: 25px;
+    font-weight: 800;
+
 }
 .container_utilidades{
     margin-top: 50px;
@@ -73,6 +70,14 @@ body::-webkit-scrollbar {
     width: 30%;
     display: flex;
     justify-content: center;
+}
+.ilustration{
+    transition: all 0.30s;
+}
+.ilustration:hover{
+    background-image: url('../assets/img/ilustration2.png');
+    background-size: cover;
+    transform: scale(0.8);
 }
 
 /* -------------Grupo de informações (Utilitarios) Lado Direito-------------------- */

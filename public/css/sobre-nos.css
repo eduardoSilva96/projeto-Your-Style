@@ -1,5 +1,6 @@
 body{
-    background-image: linear-gradient(black, black);
+    background-image: url('../assets/img/bg-sobre-nos.png');
+    background-size: cover;
 }
 body::-webkit-scrollbar {
     width: 14px; /*Largura da Barra de rolagem */
@@ -24,9 +25,10 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 35%;
     height: 50vh;
     text-align: center;
+    font-size: 20px;
 }
 
 .container_mvv{

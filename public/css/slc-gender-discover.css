@@ -1,3 +1,7 @@
+.background{
+    background-image: url('../assets/img/background-discover2.png');
+    background-size: cover;
+}
 .container_gender{
     display: flex;
     justify-content: center;
@@ -33,7 +37,7 @@
     justify-content: space-around;
 }
 .button-F{
-    background-image: linear-gradient(rgb(182, 101, 101), rgb(65, 15, 15));
+    background-image: linear-gradient(rgb(180, 68, 68), rgb(133, 43, 43));
     border-radius: 10px;
     color: #fff;
     height: 40px;
@@ -47,7 +51,9 @@
     cursor: pointer;
 }
 .button-F:hover{
-    background-image: linear-gradient(rgb(202, 71, 71), rgb(121, 26, 26));
-    transform: scale(1.1);
-    cursor: pointer;
+    cursor: not-allowed;
+}
+.em-breve{
+    margin-left: 120px;
+    color: rgb(105, 31, 43);
 }

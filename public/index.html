@@ -64,8 +64,9 @@
 
         <!------- Texto de Boas Vindas --------->
         <div class="campo_text_boasVindas">
+            <h2>Bem Vindo(a) Your Style</h2>
             <p class="boas_vindas" id="usuarios_totais">
-                Já temos 12699 Usuarios Cadastrados<br>
+                <br>
                 <!-- <i>Seu Guia da Moda</i> -->
             </p>
             <!-- <h2>A Your Style já tem 12600 Usuarios Cadastrados !</h2> -->
@@ -174,7 +175,7 @@
 
                 resposta.json().then(json => {
                     qtd = json.resultado.length
-                    usuarios_totais.innerHTML = `Já temos ${qtd} Usuarios Cadastrados`
+                    usuarios_totais.innerHTML = `Já temos ${qtd} Usuários Cadastrados`
 
                 });
 
@@ -188,4 +189,6 @@
 
         return false;
     }
+
+    
 </script>

@@ -25,6 +25,7 @@ var mySqlConfig = {
     password: "sptech",
 };
 
+
 //// Credenciais de casa ////
 
 // var mySqlConfig = {

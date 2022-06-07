@@ -1,0 +1,12 @@
+.mensagem-de-erro{
+    color: rgb(255, 255, 255);
+    background-color: rgb(160, 8, 8);
+    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+}
+.mensagem-de-sucesso{
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 89, 12);
+    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+}

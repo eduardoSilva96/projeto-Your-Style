@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header-footer.css">
     <link rel="stylesheet" href="../css/login&cadastro.css">
+    <link rel="stylesheet" href="../css/alerta-personalizado.css">
+    <script src="../js/limpar-erro.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -64,27 +66,31 @@
                     <h2>Crie uma Conta</h2>
                     <p>Insira um email e senha para se registrar</p>
                 </div>
+                <!-- mensagem de erro desligada, só liga quando da Problema -->
+                <div class="mensagem-de-erro" id="mensagem_erro" style="display: none;"></div>
 
+                <!-- mensagem de cadastrado com sucesso desligada, só liga quando cadastrar tudo certinho -->
+                <div class="mensagem-de-sucesso" id="mensagem_sucesso" style="display: none;"></div>
                 <div class="area_das_inputs">
                     <div class="div_input">
-                        <input id="nome_input" placeholder="Seu Nome">
+                        <input id="nome_input" placeholder="Seu Nome" onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_input">
-                        <input id="email_input" placeholder="Seu Email">
+                        <input id="email_input" placeholder="Seu Email" onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_input">
-                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira uma Senha">
+                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira uma Senha" onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_input">
-                        <input type="password" id="confirmacao_senha_input" class="inp_senha" placeholder="Confirme a Senha">
+                        <input type="password" id="confirmacao_senha_input" class="inp_senha" placeholder="Confirme a Senha" onclick="corrigir_erro()">
                     </div>
                     
                     <div class="div_select">
-                        <select name="" id="select_estilos">
-                            <option selected style="color: gray;">Informe seu Estilo</option>
+                        <select name="" id="select_estilos" required onclick="corrigir_erro()">
+                            <option value='' style="color: gray;">Informe seu Estilo</option>
                             <option value='1'>Tradicional</option>
                             <option value='2'>Esportivo Casual</option>
                             <option value='3'>Elegante Sofisticado</option>
@@ -116,13 +122,25 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var estiloVar = select_estilos.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || estiloVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            mensagem_erro.innerHTML = `Preencha Todos os Campos !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("email_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('email_input').style.border="2px solid red"
+            document.getElementById("senha_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('senha_input').style.border="2px solid red"
+            document.getElementById("nome_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('nome_input').style.border="2px solid red"
+            document.getElementById("confirmacao_senha_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('confirmacao_senha_input').style.border="2px solid red"
 
-            alert('Preencha todos os campos para prosseguir')
+        } else if (estiloVar == ''){
+            mensagem_erro.innerHTML = `Selecione um estilo para entrar`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("select_estilos").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById("select_estilos").style.border="2px solid red"
 
-            return false;
-        }
-        else {
+        }else {
 
             // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
@@ -144,7 +162,8 @@
 
                 if (resposta.ok) {
 
-                    alert('cadastro feito com sucesso !');
+                    mensagem_sucesso.innerHTML = `Cadastrado feito com Sucesso !`
+                    document.getElementById("mensagem_sucesso").style.display="flex";
 
                     setTimeout(() => {
                         window.location = "login.html";
