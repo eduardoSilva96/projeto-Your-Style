@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="div_input">
-                        <input type="password" id="senha_input" class="inp_senha" placeholder="Insira uma Senha" onclick="corrigir_erro()">
+                        <input type="password" id="senha_input" class="inp_senha" minlength="6" placeholder="Insira uma Senha" onclick="corrigir_erro()">
                     </div>
 
                     <div class="div_input">
@@ -122,6 +122,7 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var estiloVar = select_estilos.value;
 
+        // ------------------- VALIDAÇÃO DE CAMPOS VAZIOS -------------------------------------//
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             mensagem_erro.innerHTML = `Preencha Todos os Campos !`
             document.getElementById("mensagem_erro").style.display="flex";
@@ -133,14 +134,39 @@
             document.getElementById('nome_input').style.border="2px solid red"
             document.getElementById("confirmacao_senha_input").style.backgroundColor="rgb(255, 154, 154)";
             document.getElementById('confirmacao_senha_input').style.border="2px solid red"
+        
+        // ------------------- VALIDAÇÃO DO CAMPO DE EMAIL -------------------------------------//
+        } else if (emailVar.indexOf("@gmail.com") == -1 &&
+            emailVar.indexOf("@outlook.com") == -1 &&
+            emailVar.indexOf("@hotmail.com") == -1 &&
+            emailVar.indexOf("@yahoo.com") == -1 &&
+            emailVar.indexOf("@live.com") == -1 ){
+            mensagem_erro.innerHTML = `Email Iválido !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("email_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('email_input').style.border="2px solid red"
 
+        // ------------------- VALIDAÇÃO DOS CAMPOS DE SENHA -------------------------------------//
+        } else if (senhaVar.length < 6){
+            mensagem_erro.innerHTML = `A senha tem que ter no mínimo 6 dígitos !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("senha_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('senha_input').style.border="2px solid red"
+
+        } else if (confirmacaoSenhaVar != senhaVar){
+            mensagem_erro.innerHTML = `Confirme a mesma Senha !`
+            document.getElementById("mensagem_erro").style.display="flex";
+            document.getElementById("confirmacao_senha_input").style.backgroundColor="rgb(255, 154, 154)";
+            document.getElementById('confirmacao_senha_input').style.border="2px solid red"
+
+        // ------------------- VALIDAÇÃO DO CAMPO DE ESTILO -------------------------------------//
         } else if (estiloVar == ''){
-            mensagem_erro.innerHTML = `Selecione um estilo para entrar`
+            mensagem_erro.innerHTML = `Selecione seu estilo para cadastrar`
             document.getElementById("mensagem_erro").style.display="flex";
             document.getElementById("select_estilos").style.backgroundColor="rgb(255, 154, 154)";
             document.getElementById("select_estilos").style.border="2px solid red"
 
-        }else {
+        } else {
 
             // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
