@@ -29,10 +29,10 @@ var sqlServerConfig = {
 //// Credenciais de casa ////
 
 var mySqlConfig = {
-    host: "localhost",
-    database: "yourstyle",
-    user: "root",
-    password: "96314796Edu!",
+    host: "undefined",
+    database: "undefined",
+    user: "undefined",
+    password: "undefined",
 };
 
 function executar(instrucao) {
